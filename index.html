@@ -36,12 +36,18 @@
       margin: 0;
     }
 
-    .nav-links a {
-      color: gold;
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
+   .nav-links {
+  display: flex;
+  gap: 30px;
+  margin-right: 40px;
+}
+
+.nav-links a {
+  color: gold;
+  text-decoration: none;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
 
     .nav-links a:hover {
       text-decoration: underline;
@@ -196,11 +202,16 @@
 
   <img class="divider" src="images/section_divider.jpg" alt="divider" />
 
-  <section id="beats">
-    <h2>Beat Store</h2>
-    <p>[BeatStars or other beat player embed will go here]</p>
-    <a class="section-button" href="beats.html">Browse Beats →</a>
-  </section>
+<section>
+  <h3>🎵 Beats & Releases</h3>
+  <ul style="list-style: none; padding: 0; font-size: 1.2rem;">
+    <li><strong>1. Make It Home</strong> — Drops <em>June 13, 2025</em></li>
+    <li><strong>2. Forward</strong> — Drops <em>July 4, 2025</em></li>
+    <li><strong>3. Hooked</strong> — Drops <em>July 25, 2025</em></li>
+  </ul>
+  <p>🔥 More music and full release timeline coming soon on the <a href="releases.html">Releases page</a>.</p>
+</section>
+
 
   <img class="divider" src="images/section_divider.jpg" alt="divider" />
 
