@@ -9,6 +9,7 @@
     * {
       scroll-behavior: smooth;
     }
+
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
@@ -17,14 +18,13 @@
       background-size: cover;
     }
 
-    /* NAVBAR */
     nav {
       background: #000;
       color: gold;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 30px;
+      padding: 10px 20px;
       position: fixed;
       top: 0;
       width: 100%;
@@ -36,24 +36,23 @@
       margin: 0;
     }
 
-   .nav-links {
-  display: flex;
-  gap: 30px;
-  margin-right: 40px;
-}
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      padding-right: 20px;
+    }
 
-.nav-links a {
-  color: gold;
-  text-decoration: none;
-  font-size: 0.95rem;
-  white-space: nowrap;
-}
+    .nav-links a {
+      color: gold;
+      text-decoration: none;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
 
     .nav-links a:hover {
       text-decoration: underline;
     }
 
-    /* HERO */
     .hero {
       position: relative;
       background-image: url('images/hero_bg.jpg');
@@ -151,6 +150,17 @@
       font-size: 0.9rem;
       color: #888;
     }
+
+    ul.release-list {
+      list-style: none;
+      padding: 0;
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    ul.release-list li {
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 
@@ -188,6 +198,13 @@
   <section id="releases">
     <h2>Beats & Releases</h2>
     <p>🔥 Upcoming: <strong>Divine Times</strong> by <strong>Li63rty</strong> — dropping Dec 26, 2025</p>
+
+    <ul class="release-list">
+      <li><strong>1. Make It Home</strong> — Drops <em>June 13, 2025</em></li>
+      <li><strong>2. Forward</strong> — Drops <em>July 4, 2025</em></li>
+      <li><strong>3. Hooked</strong> — Drops <em>July 25, 2025</em></li>
+    </ul>
+
     <p>[Audio player embed or visual goes here]</p>
     <a class="section-button" href="releases.html">More Music →</a>
   </section>
@@ -199,19 +216,6 @@
     <p>[Photos, video links, and BTS will be displayed here]</p>
     <a class="section-button" href="visuals.html">See More Visuals →</a>
   </section>
-
-  <img class="divider" src="images/section_divider.jpg" alt="divider" />
-
-<section>
-  <h3>🎵 Beats & Releases</h3>
-  <ul style="list-style: none; padding: 0; font-size: 1.2rem;">
-    <li><strong>1. Make It Home</strong> — Drops <em>June 13, 2025</em></li>
-    <li><strong>2. Forward</strong> — Drops <em>July 4, 2025</em></li>
-    <li><strong>3. Hooked</strong> — Drops <em>July 25, 2025</em></li>
-  </ul>
-  <p>🔥 More music and full release timeline coming soon on the <a href="releases.html">Releases page</a>.</p>
-</section>
-
 
   <img class="divider" src="images/section_divider.jpg" alt="divider" />
 
