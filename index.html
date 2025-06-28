@@ -33,22 +33,45 @@
     }
 
     .hero {
-      background: url('images/hero_bg.jpg') center/cover no-repeat;
-      text-align: center;
-      padding: 140px 20px 160px;
       position: relative;
+      background-image: url('images/hero_bg.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
     }
 
-    .hero h2 {
-      font-size: 3rem;
-      color: gold;
-      margin: 0;
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.85));
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      padding: 180px 30px 30px; /* THIS is what moves your text down */
+      max-width: 90%;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      color: #f5c000;
+      margin-bottom: 20px;
     }
 
     .hero p {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      font-weight: 400;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      font-weight: 300;
+      color: #ffffff;
     }
 
     section {
@@ -68,47 +91,6 @@
       color: gold;
       margin-bottom: 20px;
     }
-.hero {
-  position: relative;
-  background-image: url('images/hero_bg.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.85));
-  z-index: 1;
-}
-
-.hero-text {
-  position: relative;
-  z-index: 2;
-  padding: 30px;
-  max-width: 90%;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  color: #f5c000;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  line-height: 1.5;
-  font-weight: 300;
-  color: #ffffff;
-}
 
     .social-icons img {
       height: 32px;
@@ -136,14 +118,13 @@
   </header>
 
   <!-- Hero Section -->
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-text">
-    <h1>Enter the Sound</h1>
-    <p>Music. Visuals. Movement.<br>Beats by Finn Ominal of Urban MindState.</p>
-  </div>
-</section>
-
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Enter the Sound</h1>
+      <p>Music. Visuals. Movement.<br>Beats by Finn Ominal of Urban MindState.</p>
+    </div>
+  </section>
 
   <img class="divider" src="images/section_divider.jpg" alt="divider" />
 
@@ -169,30 +150,29 @@
 
   <section>
     <h3>Connect with Me</h3>
-<div class="social-icons">
-  <a href="https://www.instagram.com/finnominalbeats/" target="_blank">
-    <img src="images/socialmedia_icons/IG_FinnOminal.png" alt="Instagram" width="40">
-  </a>
-  <a href="https://www.facebook.com/FinnOminalBeats" target="_blank">
-    <img src="images/socialmedia_icons/FB_FinnOminal.png" alt="Facebook" width="40">
-  </a>
-  <a href="https://www.tiktok.com/@finnominalbeats" target="_blank">
-    <img src="images/socialmedia_icons/TikTok_FinnOminal.png" alt="TikTok" width="40">
-  </a>
-  <a href="https://x.com/FinnOminalBeats" target="_blank">
-    <img src="images/socialmedia_icons/X_FinnOminal.png" alt="X (Twitter)" width="40">
-  </a>
-  <a href="https://www.threads.com/@finnominalbeats" target="_blank">
-    <img src="images/socialmedia_icons/Threads_FinnOminal.png" alt="Threads" width="40">
-  </a>
-  <a href="https://open.spotify.com/artist/1dx9nKXoz9zopfNN9EDTf4" target="_blank">
-    <img src="images/socialmedia_icons/Spotify_FinnOminal.png" alt="Spotify" width="40">
-  </a>
-  <a href="https://www.youtube.com/channel/UC2jaDGZcd-fTNZGVJE_j7yg" target="_blank">
-    <img src="images/socialmedia_icons/YT_FinnOminal.png" alt="YouTube" width="40">
-  </a>
-</div>
-
+    <div class="social-icons">
+      <a href="https://www.instagram.com/finnominalbeats/" target="_blank">
+        <img src="images/socialmedia_icons/IG_FinnOminal.png" alt="Instagram" width="40">
+      </a>
+      <a href="https://www.facebook.com/FinnOminalBeats" target="_blank">
+        <img src="images/socialmedia_icons/FB_FinnOminal.png" alt="Facebook" width="40">
+      </a>
+      <a href="https://www.tiktok.com/@finnominalbeats" target="_blank">
+        <img src="images/socialmedia_icons/TikTok_FinnOminal.png" alt="TikTok" width="40">
+      </a>
+      <a href="https://x.com/FinnOminalBeats" target="_blank">
+        <img src="images/socialmedia_icons/X_FinnOminal.png" alt="X (Twitter)" width="40">
+      </a>
+      <a href="https://www.threads.com/@finnominalbeats" target="_blank">
+        <img src="images/socialmedia_icons/Threads_FinnOminal.png" alt="Threads" width="40">
+      </a>
+      <a href="https://open.spotify.com/artist/1dx9nKXoz9zopfNN9EDTf4" target="_blank">
+        <img src="images/socialmedia_icons/Spotify_FinnOminal.png" alt="Spotify" width="40">
+      </a>
+      <a href="https://www.youtube.com/channel/UC2jaDGZcd-fTNZGVJE_j7yg" target="_blank">
+        <img src="images/socialmedia_icons/YT_FinnOminal.png" alt="YouTube" width="40">
+      </a>
+    </div>
   </section>
 
   <footer>
@@ -201,4 +181,3 @@
 
 </body>
 </html>
-
