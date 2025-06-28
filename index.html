@@ -4,8 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Finn Ominal | Urban MindState</title>
-  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="icon" href="images/favicon.png" />
   <style>
+    * {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
@@ -14,24 +17,37 @@
       background-size: cover;
     }
 
-    header {
-      background-color: #000;
+    /* NAVBAR */
+    nav {
+      background: #000;
+      color: gold;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 10px 30px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
     }
 
-    header img {
-      height: 40px;
-    }
-
-    header h1 {
+    nav h1 {
       font-size: 1.5rem;
-      color: gold;
       margin: 0;
     }
 
+    .nav-links a {
+      color: gold;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
     .hero {
       position: relative;
       background-image: url('images/hero_bg.jpg');
@@ -39,10 +55,11 @@
       background-position: center;
       height: 100vh;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
       text-align: center;
       color: #fff;
+      padding-bottom: 120px;
     }
 
     .hero-overlay {
@@ -50,14 +67,14 @@
       top: 0; left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.85));
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.85));
       z-index: 1;
     }
 
     .hero-text {
       position: relative;
       z-index: 2;
-      padding: 250px 30px 30px; /* THIS is what moves your text down */
+      padding: 30px;
       max-width: 90%;
     }
 
@@ -71,12 +88,11 @@
       font-size: 1.25rem;
       line-height: 1.5;
       font-weight: 300;
-      color: #ffffff;
     }
 
     section {
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
     }
 
     .divider {
@@ -86,10 +102,31 @@
       max-width: 300px;
     }
 
-    h3 {
-      font-size: 2rem;
+    h2 {
+      font-size: 2.5rem;
       color: gold;
-      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.7;
+    }
+
+    .section-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: 1px solid gold;
+      color: gold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .section-button:hover {
+      background: gold;
+      color: #000;
     }
 
     .social-icons img {
@@ -104,20 +141,26 @@
 
     footer {
       text-align: center;
-      padding: 30px 10px;
+      padding: 40px 10px;
       font-size: 0.9rem;
       color: #888;
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <img src="images/favicon.png" alt="Finn Ominal Logo" />
+  <nav>
     <h1>Finn Ominal</h1>
-  </header>
+    <div class="nav-links">
+      <a href="#about">Bio</a>
+      <a href="#releases">Releases</a>
+      <a href="#visuals">Visuals</a>
+      <a href="#beats">Beats</a>
+      <a href="#contact">Connect</a>
+    </div>
+  </nav>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-text">
@@ -128,50 +171,49 @@
 
   <img class="divider" src="images/section_divider.jpg" alt="divider" />
 
-  <section>
-    <h3>The Story</h3>
-    <p>
-      Finn Ominal is a producer, storyteller, and creative born in Flatbush, Brooklyn.<br>
-      Through genre-blending beats and raw emotional soundscapes, he builds sonic<br>
-      worlds that connect and empower. A member of Urban MindState and East Side City<br>
-      Music, his work is rooted in culture, identity, and purpose.
-    </p>
+  <section id="about">
+    <h2>The Story</h2>
+    <p>Finn Ominal is a producer, storyteller, and creative born in Flatbush, Brooklyn. Through genre-blending beats and raw emotional soundscapes, he builds sonic worlds that connect and empower. A member of Urban MindState and East Side City Music, his work is rooted in culture, identity, and purpose.</p>
+    <a class="section-button" href="bio.html">Full Bio →</a>
   </section>
 
   <img class="divider" src="images/section_divider.jpg" alt="divider" />
 
-  <section>
-    <h3>Beats & Releases</h3>
-    <p>🔥 Upcoming project: <strong>Divine Times</strong> by <strong>Li63rty</strong> — dropping Dec 26, 2025</p>
-    <p>[Embed player or audio preview goes here]</p>
+  <section id="releases">
+    <h2>Beats & Releases</h2>
+    <p>🔥 Upcoming: <strong>Divine Times</strong> by <strong>Li63rty</strong> — dropping Dec 26, 2025</p>
+    <p>[Audio player embed or visual goes here]</p>
+    <a class="section-button" href="releases.html">More Music →</a>
   </section>
 
   <img class="divider" src="images/section_divider.jpg" alt="divider" />
 
-  <section>
-    <h3>Connect with Me</h3>
+  <section id="visuals">
+    <h2>Visuals</h2>
+    <p>[Photos, video links, and BTS will be displayed here]</p>
+    <a class="section-button" href="visuals.html">See More Visuals →</a>
+  </section>
+
+  <img class="divider" src="images/section_divider.jpg" alt="divider" />
+
+  <section id="beats">
+    <h2>Beat Store</h2>
+    <p>[BeatStars or other beat player embed will go here]</p>
+    <a class="section-button" href="beats.html">Browse Beats →</a>
+  </section>
+
+  <img class="divider" src="images/section_divider.jpg" alt="divider" />
+
+  <section id="contact">
+    <h2>Connect with Me</h2>
     <div class="social-icons">
-      <a href="https://www.instagram.com/finnominalbeats/" target="_blank">
-        <img src="images/socialmedia_icons/IG_FinnOminal.png" alt="Instagram" width="40">
-      </a>
-      <a href="https://www.facebook.com/FinnOminalBeats" target="_blank">
-        <img src="images/socialmedia_icons/FB_FinnOminal.png" alt="Facebook" width="40">
-      </a>
-      <a href="https://www.tiktok.com/@finnominalbeats" target="_blank">
-        <img src="images/socialmedia_icons/TikTok_FinnOminal.png" alt="TikTok" width="40">
-      </a>
-      <a href="https://x.com/FinnOminalBeats" target="_blank">
-        <img src="images/socialmedia_icons/X_FinnOminal.png" alt="X (Twitter)" width="40">
-      </a>
-      <a href="https://www.threads.com/@finnominalbeats" target="_blank">
-        <img src="images/socialmedia_icons/Threads_FinnOminal.png" alt="Threads" width="40">
-      </a>
-      <a href="https://open.spotify.com/artist/1dx9nKXoz9zopfNN9EDTf4" target="_blank">
-        <img src="images/socialmedia_icons/Spotify_FinnOminal.png" alt="Spotify" width="40">
-      </a>
-      <a href="https://www.youtube.com/channel/UC2jaDGZcd-fTNZGVJE_j7yg" target="_blank">
-        <img src="images/socialmedia_icons/YT_FinnOminal.png" alt="YouTube" width="40">
-      </a>
+      <a href="https://www.instagram.com/finnominalbeats/" target="_blank"><img src="images/socialmedia_icons/IG_FinnOminal.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/FinnOminalBeats" target="_blank"><img src="images/socialmedia_icons/FB_FinnOminal.png" alt="Facebook"></a>
+      <a href="https://www.tiktok.com/@finnominalbeats" target="_blank"><img src="images/socialmedia_icons/TikTok_FinnOminal.png" alt="TikTok"></a>
+      <a href="https://x.com/FinnOminalBeats" target="_blank"><img src="images/socialmedia_icons/X_FinnOminal.png" alt="X (Twitter)"></a>
+      <a href="https://www.threads.com/@finnominalbeats" target="_blank"><img src="images/socialmedia_icons/Threads_FinnOminal.png" alt="Threads"></a>
+      <a href="https://open.spotify.com/artist/1dx9nKXoz9zopfNN9EDTf4" target="_blank"><img src="images/socialmedia_icons/Spotify_FinnOminal.png" alt="Spotify"></a>
+      <a href="https://www.youtube.com/channel/UC2jaDGZcd-fTNZGVJE_j7yg" target="_blank"><img src="images/socialmedia_icons/YT_FinnOminal.png" alt="YouTube"></a>
     </div>
   </section>
 
