@@ -14,34 +14,102 @@
       color: #f5f5f5;
     }
 
-    nav {
+    .navbar {
       background: #000;
       color: gold;
+      padding: 12px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .nav-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 30px;
-      position: sticky;
-      top: 0;
+    }
+
+    .logo {
+      color: gold;
+      font-size: 1.3rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links a {
+      color: gold;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background: #111;
+      padding: 10px 0;
+      min-width: 140px;
       z-index: 1000;
     }
 
-    nav a {
+    .dropdown-menu li {
+      text-align: left;
+      padding: 6px 16px;
+    }
+
+    .dropdown-menu li a {
       color: gold;
-      text-decoration: none;
-      margin-left: 20px;
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
     }
 
     .hero {
-      background: url('images/hero_bg.jpg') center/cover no-repeat;
-      padding: 120px 30px 60px;
+      background: url('images/finn_portrait.jpg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      position: relative;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      color: gold;
-      margin-bottom: 10px;
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      color: #f5c000;
+      font-size: 2rem;
+      padding: 20px;
     }
 
     .content {
@@ -96,19 +164,38 @@
 </head>
 <body>
 
-  <nav>
-    <div><strong>Finn Ominal</strong></div>
-    <div><a href="index.html">← Back to Home</a></div>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Finn Ominal</a>
+      <ul class="nav-links">
+        <li><a href="bio.html">Bio</a></li>
+        <li class="dropdown">
+          <a href="#">Music ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="songs.html">Songs</a></li>
+            <li><a href="beats.html">Beats</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Visuals ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="graphics.html">Graphics</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Connect</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <section class="hero">
-    <h1>Who is Finn Ominal?</h1>
-    <p>Producer. Storyteller. Architect of Sound.</p>
-  </section>
+  <div class="hero">
+    <div class="hero-text">
+      "Music that speaks truth, shares culture, and tells meaningful stories."
+    </div>
+  </div>
 
   <section class="content">
     <img src="images/mask_01.jpg" alt="Finn Ominal mask">
-    
     <div class="bio-text">
       <h2>About Me</h2>
       <p>
