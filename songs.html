@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finn Ominal | Songs</title>
+  <link rel="icon" href="images/favicon.png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: url('images/texture_dark.png') repeat;
+      background-size: cover;
+      color: #f5f5f5;
+    }
+
+    .navbar {
+      background: #000;
+      color: gold;
+      padding: 12px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: gold;
+      font-size: 1.3rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links a {
+      color: gold;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background: #111;
+      padding: 10px 0;
+      min-width: 140px;
+      z-index: 1000;
+    }
+
+    .dropdown-menu li {
+      text-align: left;
+      padding: 6px 16px;
+    }
+
+    .dropdown-menu li a {
+      color: gold;
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: gold;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .embed-player {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    ul.release-list {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+
+    ul.release-list li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Finn Ominal</a>
+      <ul class="nav-links">
+        <li><a href="bio.html">Bio</a></li>
+        <li class="dropdown">
+          <a href="#">Music ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="songs.html">Songs</a></li>
+            <li><a href="beats.html">Beats</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Visuals ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="graphics.html">Graphics</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Connect</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section>
+    <h2>🎧 Featured Song: Make It Home</h2>
+    <p><strong>Artist:</strong> Li63rty<br>
+    <strong>Produced by:</strong> Finn Ominal</p>
+    <div class="embed-player">
+      <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/make-it-home-single/1817584193"></iframe>
+    </div>
+  </section>
+
+  <section>
+    <h2>📅 Upcoming Releases</h2>
+    <ul class="release-list">
+      <li><strong>1. Make It Home</strong> — June 13, 2025</li>
+      <li><strong>2. Forward</strong> — July 4, 2025</li>
+      <li><strong>3. Hooked</strong> — July 25, 2025</li>
+      <li><strong>4. Stuck On You</strong> — August 15, 2025</li>
+      <li><strong>5. It’s My Calling</strong> — September 5, 2025</li>
+      <li><strong>6. Keep It NY</strong> — September 26, 2025</li>
+      <li><strong>7. The Way I Work</strong> — October 17, 2025</li>
+      <li><strong>8. Pressure</strong> — November 7, 2025</li>
+      <li><strong>9. The Night Goes</strong> — November 28, 2025</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🏙 East Side City Music</h2>
+    <p>Representing collaboration, culture, and creativity. Meet the artists of the collective:</p>
+    <ul class="release-list">
+      <li><strong>Li63rty</strong></li>
+      <li><strong>SparklesDiDiva</strong></li>
+      <li><strong>Fr33dom Z3us</strong></li>
+      <li><strong>Baggie Bags</strong></li>
+      <li><strong>Muzique By Blow</strong> (Producer)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🤖 AI-Assisted Music</h2>
+    <p>Finn Ominal blends human creativity with cutting-edge AI tools to shape the future of sound:</p>
+    <ul class="release-list">
+      <li><strong>Idea & Concept:</strong> Finn Ominal</li>
+      <li><strong>Custom MyGPT's:</strong> Trained on 20+ years of written material</li>
+      <li><strong>Tools:</strong> Suno Generator, Suno & FL Studio Stem Splitter</li>
+      <li><strong>Finalization:</strong> FL Studio for beatmaking, mixing, and mastering</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 Finn Ominal. All rights reserved.
+  </footer>
+</body>
+</html>
