@@ -2,133 +2,140 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Finn Ominal | Bio</title>
   <link rel="icon" href="images/favicon.png" />
   <style>
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
-      color: #f5f5f5;
       background: url('images/texture_dark.png') repeat;
       background-size: cover;
+      color: #f5f5f5;
     }
 
-    header {
-      background-color: #000;
+    nav {
+      background: #000;
+      color: gold;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 10px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
       color: gold;
+      text-decoration: none;
+      margin-left: 20px;
     }
 
     .hero {
-      background: url('images/finn_portrait.jpg') center/cover no-repeat;
-      height: 60vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background: url('images/hero_bg.jpg') center/cover no-repeat;
+      padding: 120px 30px 60px;
       text-align: center;
-      position: relative;
     }
 
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-
-    .hero-text {
-      position: relative;
-      z-index: 2;
-      color: #f5c000;
-      font-size: 2rem;
-      padding: 20px;
-    }
-
-    section {
-      padding: 60px 20px;
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      font-size: 2.5rem;
+    .hero h1 {
+      font-size: 3rem;
       color: gold;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
-    p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
-
-    .quick-stats {
-      margin-top: 40px;
+    .content {
       display: flex;
       flex-wrap: wrap;
+      gap: 40px;
+      padding: 60px 30px;
       justify-content: center;
-      gap: 20px;
-      font-size: 1rem;
+      align-items: flex-start;
     }
 
-    .quick-stats div {
-      background: rgba(255, 215, 0, 0.1);
-      border: 1px solid gold;
-      padding: 10px 20px;
-      border-radius: 8px;
+    .content img {
+      max-width: 300px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.5);
+    }
+
+    .bio-text {
+      max-width: 600px;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .bio-text h2 {
+      color: gold;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .tags {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #ccc;
     }
 
     footer {
       text-align: center;
-      padding: 40px 10px;
-      font-size: 0.9rem;
+      padding: 30px 20px;
+      font-size: 0.85rem;
       color: #888;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
     }
   </style>
 </head>
-
 <body>
-  <header>
-    <h1>Finn Ominal</h1>
-    <a href="index.html" style="color: gold; text-decoration: none;">← Back to Home</a>
-  </header>
 
-  <div class="hero">
-    <div class="hero-text">
-      "Music that speaks truth, shares culture, and tells meaningful stories."
-    </div>
-  </div>
+  <nav>
+    <div><strong>Finn Ominal</strong></div>
+    <div><a href="index.html">← Back to Home</a></div>
+  </nav>
 
-  <section>
-    <h2>Meet Finn Ominal</h2>
-    <p>
-      Finn Ominal is a music producer, storyteller, and creative force born in Flatbush, Brooklyn. With over 20 years of experience and a deep passion for music creation, he brings a versatile sound that fuses Hip Hop, R&B, Dancehall, Soca, Reggae, Afrobeats, Amapiano, and cinematic film scores. His music is raw, real, and built to connect — reminding people they’re not alone.
-    </p>
-    <p>
-      Finn is one half of the production duo Urban MindState, alongside fellow producer Muzique By Blow. He’s also a member of the East Side City Music collective, where collaboration and cultural storytelling take center stage. His foundation in music production and audio engineering was sharpened at Full Sail University, fueling his commitment to both the craft and the message behind it.
-    </p>
-    <p>
-      Outside the studio, Finn is a multi-talented creative — a graphic designer, video editor, and DIY crafter who brings his storytelling skills into every medium. His mission is clear: to give his family a life of freedom, love, and laughter — and to reach others through music that speaks truth, shares culture, and tells meaningful stories.
-    </p>
+  <section class="hero">
+    <h1>Who is Finn Ominal?</h1>
+    <p>Producer. Storyteller. Architect of Sound.</p>
+  </section>
 
-    <div class="quick-stats">
-      <div>🎧 20+ Years Producing</div>
-      <div>🌍 Brooklyn-Born</div>
-      <div>🎓 Full Sail Graduate</div>
-      <div>🎶 Urban MindState</div>
-      <div>📽 Visual Creator</div>
-      <div>✊🏾 Culture First</div>
+  <section class="content">
+    <img src="images/mask_01.jpg" alt="Finn Ominal mask">
+    
+    <div class="bio-text">
+      <h2>About Me</h2>
+      <p>
+        Finn Ominal is a music producer, storyteller, and creative force born in Flatbush, Brooklyn.
+        With over 20 years of experience, he brings a versatile sound that fuses Hip Hop, R&B,
+        Dancehall, Soca, Reggae, Afrobeats, Amapiano, and cinematic film scores.
+      </p>
+      <p>
+        One half of the production duo <strong>Urban MindState</strong> and a member of the
+        <strong>East Side City Music</strong> collective, Finn is driven by collaboration and cultural storytelling.
+        His foundation in music production and audio engineering, sharpened at Full Sail University,
+        fuels both his sonic craft and the message behind it.
+      </p>
+      <p>
+        Outside the studio, Finn is also a graphic designer, video editor, and hands-on creative.
+        Whether it’s sound, visuals, or DIY craftwork, his work is rooted in identity, emotion, and purpose.
+      </p>
+      <p><strong>Mission:</strong> To give his family a life of freedom, love, and laughter — and to connect with others through truth and sound.</p>
+      <div class="tags">
+        #UrbanMindState #FlatbushRoots #CultureCrafted #SoundDriven #FinnOminalBeats
+      </div>
     </div>
   </section>
 
   <footer>
     &copy; 2025 Finn Ominal. All rights reserved.
   </footer>
+
 </body>
 </html>
