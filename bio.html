@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finn Ominal | Bio</title>
+  <link rel="icon" href="images/favicon.png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      color: #f5f5f5;
+      background: url('images/texture_dark.png') repeat;
+      background-size: cover;
+    }
+
+    header {
+      background-color: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      color: gold;
+    }
+
+    .hero {
+      background: url('images/finn_portrait.jpg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      color: #f5c000;
+      font-size: 2rem;
+      padding: 20px;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: gold;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .quick-stats {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      font-size: 1rem;
+    }
+
+    .quick-stats div {
+      background: rgba(255, 215, 0, 0.1);
+      border: 1px solid gold;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 10px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Finn Ominal</h1>
+    <a href="index.html" style="color: gold; text-decoration: none;">← Back to Home</a>
+  </header>
+
+  <div class="hero">
+    <div class="hero-text">
+      "Music that speaks truth, shares culture, and tells meaningful stories."
+    </div>
+  </div>
+
+  <section>
+    <h2>Meet Finn Ominal</h2>
+    <p>
+      Finn Ominal is a music producer, storyteller, and creative force born in Flatbush, Brooklyn. With over 20 years of experience and a deep passion for music creation, he brings a versatile sound that fuses Hip Hop, R&B, Dancehall, Soca, Reggae, Afrobeats, Amapiano, and cinematic film scores. His music is raw, real, and built to connect — reminding people they’re not alone.
+    </p>
+    <p>
+      Finn is one half of the production duo Urban MindState, alongside fellow producer Muzique By Blow. He’s also a member of the East Side City Music collective, where collaboration and cultural storytelling take center stage. His foundation in music production and audio engineering was sharpened at Full Sail University, fueling his commitment to both the craft and the message behind it.
+    </p>
+    <p>
+      Outside the studio, Finn is a multi-talented creative — a graphic designer, video editor, and DIY crafter who brings his storytelling skills into every medium. His mission is clear: to give his family a life of freedom, love, and laughter — and to reach others through music that speaks truth, shares culture, and tells meaningful stories.
+    </p>
+
+    <div class="quick-stats">
+      <div>🎧 20+ Years Producing</div>
+      <div>🌍 Brooklyn-Born</div>
+      <div>🎓 Full Sail Graduate</div>
+      <div>🎶 Urban MindState</div>
+      <div>📽 Visual Creator</div>
+      <div>✊🏾 Culture First</div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Finn Ominal. All rights reserved.
+  </footer>
+</body>
+</html>
