@@ -123,7 +123,7 @@
       max-width: 300px;
     }
 
-    h2 {
+    h2, h3 {
       font-size: 2.5rem;
       color: gold;
     }
@@ -137,7 +137,7 @@
 
     .section-button {
       display: inline-block;
-      margin-top: 20px;
+      margin: 10px;
       padding: 10px 20px;
       border: 1px solid gold;
       color: gold;
@@ -160,11 +160,35 @@
       transform: scale(1.2);
     }
 
+    iframe {
+      width: 100%;
+      max-width: 660px;
+      border-radius: 12px;
+      height: 352px;
+    }
+
     footer {
       text-align: center;
       padding: 40px 10px;
       font-size: 0.9rem;
       color: #888;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p,
+      p {
+        font-size: 1rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
@@ -194,7 +218,6 @@
     </ul>
   </nav>
 
-    <!-- Hero Section -->
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-text">
@@ -218,9 +241,15 @@
   <img class="divider" src="images/section_divider.jpg" alt="divider" />
 
   <section>
-    <h3>Beats & Releases</h3>
+    <h3>Music Preview</h3>
     <p>🔥 Upcoming project: <strong>Divine Times</strong> by <strong>Li63rty</strong> — dropping Dec 26, 2025</p>
-    <p>[Embed player or audio preview goes here]</p>
+    <iframe src="https://open.spotify.com/embed/track/2EBkg2cSOSoz7qJCoHqB3Z?utm_source=generator&theme=0" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <div>
+      <a class="section-button" href="songs.html">Songs</a>
+      <a class="section-button" href="beats.html">Beats</a>
+      <a class="section-button" href="releases.html">Releases</a>
+      <a class="section-button" href="scores.html">Film Scores</a>
+    </div>
   </section>
 
   <img class="divider" src="images/section_divider.jpg" alt="divider" />
