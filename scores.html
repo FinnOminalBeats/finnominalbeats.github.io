@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Finn Ominal | Film Scores</title>
+  <title>Finn Ominal</title>
   <link rel="icon" href="images/favicon.png" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
@@ -14,36 +17,34 @@
       color: #f5f5f5;
     }
 
-    .navbar {
+    nav {
       background: #000;
       color: gold;
-      padding: 12px 30px;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    }
-
-    .nav-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
 
-    .logo {
+    nav h1 {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
       color: gold;
-      font-size: 1.3rem;
-      text-decoration: none;
-      font-weight: bold;
     }
 
     .nav-links {
-      list-style: none;
       display: flex;
       gap: 30px;
-      align-items: center;
-      margin: 0;
-      padding: 0;
+      list-style: none;
     }
 
     .nav-links li {
@@ -53,7 +54,8 @@
     .nav-links a {
       color: gold;
       text-decoration: none;
-      font-size: 1rem;
+      font-size: 0.95rem;
+      white-space: nowrap;
     }
 
     .nav-links a:hover {
@@ -63,97 +65,165 @@
     .dropdown-menu {
       display: none;
       position: absolute;
-      top: 30px;
-      left: 0;
       background: #111;
-      padding: 10px 0;
-      min-width: 140px;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
       z-index: 1000;
     }
 
     .dropdown-menu li {
-      text-align: left;
-      padding: 6px 16px;
+      padding: 10px;
     }
 
-    .dropdown-menu li a {
-      color: gold;
+    .nav-links li:hover .dropdown-menu {
       display: block;
     }
 
-    .dropdown:hover .dropdown-menu {
-      display: block;
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #000;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .dropdown-menu {
+        position: static;
+        background: #111;
+        padding-left: 20px;
+      }
     }
 
-    section {
+    .social-icons {
       text-align: center;
-      padding: 80px 20px;
-      max-width: 800px;
-      margin: 0 auto;
+      padding: 60px 10px 20px;
     }
 
-    h1 {
+    .social-icons h2 {
+      font-size: 2rem;
       color: gold;
-      font-size: 2.5rem;
       margin-bottom: 20px;
     }
 
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
+    .social-icons a img {
+      height: 32px;
+      margin: 0 10px;
+      transition: transform 0.3s;
     }
 
-    img.logo-img {
-      margin-top: 40px;
-      max-width: 200px;
+    .social-icons a img:hover {
+      transform: scale(1.2);
     }
 
     footer {
       text-align: center;
-      padding: 30px;
-      font-size: 0.85rem;
-      color: #888;
+      padding: 20px 10px;
+      font-size: 0.9rem;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo">Finn Ominal</a>
-      <ul class="nav-links">
-        <li><a href="bio.html">Bio</a></li>
-        <li class="dropdown">
-          <a href="#">Music ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="songs.html">Songs</a></li>
-            <li><a href="releases.html">Artist Releases</a></li>
-            <li><a href="beats.html">Beats</a></li>
-            <li><a href="scores.html">Film Scores</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Visuals ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="videos.html">Videos</a></li>
-            <li><a href="graphics.html">Graphics</a></li>
-          </ul>
-        </li>
-        <li><a href="contact.html">Connect</a></li>
-      </ul>
-    </div>
+  <!-- Navigation -->
+  <nav>
+    <h1>Finn Ominal</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bio.html">Bio</a></li>
+      <li class="dropdown">
+        <a href="#">Music ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="songs.html">Songs</a></li>
+          <li><a href="releases.html">Artist Releases</a></li>
+          <li><a href="beats.html">Beats</a></li>
+          <li><a href="scores.html">Film Scores</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Visuals ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="graphics.html">Graphics</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Connect</a></li>
+    </ul>
   </nav>
 
-  <section>
-    <h1>🎬 Film Scores</h1>
-    <p>Original film score compositions coming soon.<br>
-       Explore cinematic soundscapes created by Finn Ominal for film, television, and visual storytelling.</p>
-    <img src="images/finnominal_logo.png" alt="Finn Ominal Logo" class="logo-img">
-  </section>
+  <!-- ========================== -->
+  <!-- PAGE-SPECIFIC CONTENT HERE -->
+  <!-- PASTE THE CONTENT FOR THIS PAGE BELOW -->
+  
+  
 
+  
+  
+  
+  
+  
+  <!-- ========================== -->
+
+  <!-- Connect With Me -->
+  <div class="social-icons">
+    <h2>Connect with Me</h2>
+    <a href="https://www.instagram.com/finnominalbeats/" target="_blank">
+      <img src="images/socialmedia_icons/IG_FinnOminal.png" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/FinnOminalBeats" target="_blank">
+      <img src="images/socialmedia_icons/FB_FinnOminal.png" alt="Facebook">
+    </a>
+    <a href="https://www.tiktok.com/@finnominalbeats" target="_blank">
+      <img src="images/socialmedia_icons/TikTok_FinnOminal.png" alt="TikTok">
+    </a>
+    <a href="https://x.com/FinnOminalBeats" target="_blank">
+      <img src="images/socialmedia_icons/X_FinnOminal.png" alt="X">
+    </a>
+    <a href="https://www.threads.com/@finnominalbeats" target="_blank">
+      <img src="images/socialmedia_icons/Threads_FinnOminal.png" alt="Threads">
+    </a>
+    <a href="https://open.spotify.com/artist/1dx9nKXoz9zopfNN9EDTf4" target="_blank">
+      <img src="images/socialmedia_icons/Spotify_FinnOminal.png" alt="Spotify">
+    </a>
+    <a href="https://www.youtube.com/channel/UC2jaDGZcd-fTNZGVJE_j7yg" target="_blank">
+      <img src="images/socialmedia_icons/YT_FinnOminal.png" alt="YouTube">
+    </a>
+  </div>
+
+  <!-- Footer -->
   <footer>
     &copy; 2025 Finn Ominal. All rights reserved.
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById('navMenu');
+      navMenu.classList.toggle('active');
+    }
+
+    document.addEventListener('click', function (e) {
+      const nav = document.querySelector('nav');
+      if (!nav.contains(e.target)) {
+        document.getElementById('navMenu').classList.remove('active');
+      }
+    });
+  </script>
+
 </body>
 </html>
-
