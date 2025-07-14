@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Finn Ominal</title>
+  <title>Finn Ominal | About Finn Ominal</title>
   <link rel="icon" href="images/favicon.png" />
   <style>
     * {
@@ -23,31 +23,25 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
+      padding: 10px 30px;
       position: sticky;
       top: 0;
       z-index: 999;
     }
 
     nav h1 {
-      font-size: 1.4rem;
-      margin: 0;
-    }
-
-    .menu-toggle {
-      display: none;
       font-size: 1.5rem;
-      cursor: pointer;
-      color: gold;
+      margin: 0;
     }
 
     .nav-links {
       display: flex;
       gap: 30px;
-      list-style: none;
+      position: relative;
     }
 
     .nav-links li {
+      list-style: none;
       position: relative;
     }
 
@@ -65,85 +59,143 @@
     .dropdown-menu {
       display: none;
       position: absolute;
-      background: #111;
       top: 100%;
       left: 0;
+      background: #111;
+      padding: 10px 0;
       min-width: 160px;
-      z-index: 1000;
     }
 
     .dropdown-menu li {
-      padding: 10px;
+      padding: 8px 16px;
     }
 
-    .nav-links li:hover .dropdown-menu {
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
       display: block;
     }
 
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-links {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background: #000;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
-        display: none;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .dropdown-menu {
-        position: static;
-        background: #111;
-        padding-left: 20px;
-      }
-    }
-
-    .social-icons {
+    .hero {
+      background: url('images/hero_bg.jpg') center/cover no-repeat;
       text-align: center;
-      padding: 60px 10px 20px;
+      padding: 140px 20px 160px;
+      position: relative;
     }
 
-    .social-icons h2 {
-      font-size: 2rem;
-      color: gold;
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.85));
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      padding: 30px;
+      max-width: 90%;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      color: #f5c000;
       margin-bottom: 20px;
     }
 
-    .social-icons a img {
+    .hero p {
+      font-size: 1.25rem;
+      line-height: 1.5;
+      font-weight: 300;
+      color: #ffffff;
+    }
+
+    section {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .divider {
+      margin: 40px auto;
+      display: block;
+      height: auto;
+      max-width: 300px;
+    }
+
+    h2, h3 {
+      font-size: 2.5rem;
+      color: gold;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.7;
+    }
+
+    .section-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border: 1px solid gold;
+      color: gold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .section-button:hover {
+      background: gold;
+      color: #000;
+    }
+
+    .social-icons img {
       height: 32px;
-      margin: 0 10px;
+      margin: 0 8px;
       transition: transform 0.3s;
     }
 
-    .social-icons a img:hover {
+    .social-icons img:hover {
       transform: scale(1.2);
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 660px;
+      border-radius: 12px;
+      height: 352px;
     }
 
     footer {
       text-align: center;
-      padding: 20px 10px;
+      padding: 40px 10px;
       font-size: 0.9rem;
-      color: #aaa;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p,
+      p {
+        font-size: 1rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
-
-  <!-- Navigation -->
   <nav>
     <h1>Finn Ominal</h1>
-    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-    <ul class="nav-links" id="navMenu">
+    <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="bio.html">Bio</a></li>
       <li class="dropdown">
