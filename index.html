@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Finn Ominal | Home</title>
-  <link rel="icon" href="images/favicon.png">
+  <link rel="icon" href="images/favicon.png" />
   <style>
     * {
-      scroll-behavior: smooth;
+      box-sizing: border-box;
     }
-
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
@@ -18,47 +17,39 @@
       color: #f5f5f5;
     }
 
-    /* Navigation Bar */
-    .navbar {
+    nav {
       background: #000;
       color: gold;
-      padding: 12px 30px;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    }
-
-    .nav-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 10px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
 
-    .logo {
-      color: gold;
-      font-size: 1.3rem;
-      text-decoration: none;
-      font-weight: bold;
+    nav h1 {
+      font-size: 1.5rem;
+      margin: 0;
     }
 
     .nav-links {
-      list-style: none;
       display: flex;
       gap: 30px;
-      align-items: center;
-      margin: 0;
-      padding: 0;
+      position: relative;
     }
 
     .nav-links li {
+      list-style: none;
       position: relative;
     }
 
     .nav-links a {
       color: gold;
       text-decoration: none;
-      font-size: 1rem;
+      font-size: 0.95rem;
+      white-space: nowrap;
     }
 
     .nav-links a:hover {
@@ -68,46 +59,34 @@
     .dropdown-menu {
       display: none;
       position: absolute;
-      top: 30px;
+      top: 100%;
       left: 0;
       background: #111;
       padding: 10px 0;
-      min-width: 140px;
-      z-index: 1000;
+      min-width: 160px;
     }
 
     .dropdown-menu li {
-      text-align: left;
-      padding: 6px 16px;
+      padding: 8px 16px;
     }
 
-    .dropdown-menu li a {
-      color: gold;
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
       display: block;
     }
 
-    .dropdown:hover .dropdown-menu {
-      display: block;
-    }
-
-    /* Hero */
     .hero {
-      position: relative;
-      background-image: url('images/hero_bg.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
+      background: url('images/hero_bg.jpg') center/cover no-repeat;
       text-align: center;
-      padding-bottom: 120px;
+      padding: 140px 20px 160px;
+      position: relative;
     }
 
     .hero-overlay {
       position: absolute;
       top: 0; left: 0;
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
       background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.85));
       z-index: 1;
     }
@@ -129,6 +108,7 @@
       font-size: 1.25rem;
       line-height: 1.5;
       font-weight: 300;
+      color: #ffffff;
     }
 
     section {
@@ -136,16 +116,23 @@
       padding: 80px 20px;
     }
 
+    .divider {
+      margin: 40px auto;
+      display: block;
+      height: auto;
+      max-width: 300px;
+    }
+
     h2 {
       font-size: 2.5rem;
       color: gold;
     }
 
-    .release-list {
-      list-style: none;
-      padding: 0;
-      font-size: 1.2rem;
-      margin-top: 20px;
+    p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.7;
     }
 
     .section-button {
@@ -161,26 +148,6 @@
     .section-button:hover {
       background: gold;
       color: #000;
-    }
-
-    .visual-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 40px;
-    }
-
-    .visual-gallery img {
-      width: 180px;
-      height: auto;
-      border-radius: 12px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .visual-gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 10px gold;
     }
 
     .social-icons img {
@@ -201,83 +168,36 @@
     }
   </style>
 </head>
-
 <body>
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo">Finn Ominal</a>
-      <ul class="nav-links">
-        <li><a href="bio.html">Bio</a></li>
-        <li class="dropdown">
-          <a href="#">Music ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="songs.html">Songs</a></li>
-            <li><a href="beats.html">Beats</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Visuals ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="videos.html">Videos</a></li>
-            <li><a href="graphics.html">Graphics</a></li>
-          </ul>
-        </li>
-        <li><a href="contact.html">Connect</a></li>
-      </ul>
-    </div>
+  <nav>
+    <h1>Finn Ominal</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bio.html">Bio</a></li>
+      <li class="dropdown">
+        <a href="#">Music ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="songs.html">Songs</a></li>
+          <li><a href="releases.html">Artist Releases</a></li>
+          <li><a href="beats.html">Beats</a></li>
+          <li><a href="scores.html">Film Scores</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Visuals ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="graphics.html">Graphics</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Connect</a></li>
+    </ul>
   </nav>
 
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-text">
-      <h1>Enter the Sound</h1>
-      <p>Music. Visuals. Movement.<br>Beats by Finn Ominal of Urban MindState.</p>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>The Story</h2>
-    <p>Finn Ominal is a producer, storyteller, and creative born in Flatbush, Brooklyn. Through genre-blending beats and raw emotional soundscapes, he builds sonic worlds that connect and empower. A member of Urban MindState and East Side City Music, his work is rooted in culture, identity, and purpose.</p>
-    <a class="section-button" href="bio.html">Full Bio →</a>
-  </section>
-
-  <section id="releases">
-    <h2>Beats & Releases</h2>
-    <p>🔥 Upcoming: <strong>Divine Times</strong> by <strong>Li63rty</strong> — dropping Dec 26, 2025</p>
-    <ul class="release-list">
-      <li><strong>1. Make It Home</strong> — Drops <em>June 13, 2025</em></li>
-      <li><strong>2. Forward</strong> — Drops <em>July 4, 2025</em></li>
-      <li><strong>3. Hooked</strong> — Drops <em>July 25, 2025</em></li>
-    </ul>
-    <a class="section-button" href="songs.html">More Music →</a>
-  </section>
-
-  <section id="visuals">
-    <h2>Visuals</h2>
-    <div class="visual-gallery">
-      <img src="images/pic_01.png" alt="pic 01" />
-      <img src="images/pic_02.png" alt="pic 02" />
-      <img src="images/pic_04.png" alt="pic 04" />
-    </div>
-    <a class="section-button" href="visuals.html">See More Visuals →</a>
-  </section>
-
-  <section id="contact">
-    <h2>Connect with Me</h2>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/finnominalbeats/" target="_blank"><img src="images/socialmedia_icons/IG_FinnOminal.png" alt="Instagram"></a>
-      <a href="https://www.facebook.com/FinnOminalBeats" target="_blank"><img src="images/socialmedia_icons/FB_FinnOminal.png" alt="Facebook"></a>
-      <a href="https://www.tiktok.com/@finnominalbeats" target="_blank"><img src="images/socialmedia_icons/TikTok_FinnOminal.png" alt="TikTok"></a>
-      <a href="https://x.com/FinnOminalBeats" target="_blank"><img src="images/socialmedia_icons/X_FinnOminal.png" alt="X (Twitter)"></a>
-      <a href="https://www.threads.com/@finnominalbeats" target="_blank"><img src="images/socialmedia_icons/Threads_FinnOminal.png" alt="Threads"></a>
-      <a href="https://open.spotify.com/artist/1dx9nKXoz9zopfNN9EDTf4" target="_blank"><img src="images/socialmedia_icons/Spotify_FinnOminal.png" alt="Spotify"></a>
-      <a href="https://www.youtube.com/channel/UC2jaDGZcd-fTNZGVJE_j7yg" target="_blank"><img src="images/socialmedia_icons/YT_FinnOminal.png" alt="YouTube"></a>
-    </div>
-  </section>
+  <!-- Main content would go here -->
 
   <footer>
     &copy; 2025 Finn Ominal. All rights reserved.
   </footer>
-
 </body>
 </html>
