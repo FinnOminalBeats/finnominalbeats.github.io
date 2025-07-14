@@ -1,9 +1,11 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Finn Ominal | Home</title>
   <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
   <style>
     * {
       box-sizing: border-box;
@@ -14,185 +16,304 @@
       background: url('images/texture_dark.png') repeat;
       background-size: cover;
       color: #f5f5f5;
-    }nav {
-  background: #000;
-  color: gold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
+    }
 
-nav h1 {
-  font-size: 1.5rem;
-  margin: 0;
-}
+    nav {
+      background: #000;
+      color: gold;
+      padding: 10px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 30px;
-  position: relative;
-}
+    .nav-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
 
-.nav-links li {
-  list-style: none;
-  position: relative;
-}
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
 
-.nav-links a {
-  color: gold;
-  text-decoration: none;
-  font-size: 0.95rem;
-  white-space: nowrap;
-}
+    .nav-toggle span {
+      height: 3px;
+      width: 25px;
+      background: gold;
+      margin: 4px 0;
+    }
 
-.nav-links a:hover {
-  text-decoration: underline;
-}
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
 
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #111;
-  padding: 10px 0;
-  min-width: 160px;
-}
+    .nav-links li {
+      position: relative;
+    }
 
-.dropdown-menu li {
-  padding: 8px 16px;
-}
+    .nav-links a {
+      color: gold;
+      text-decoration: none;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
 
-.dropdown:hover .dropdown-menu,
-.dropdown:focus-within .dropdown-menu {
-  display: block;
-}
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #111;
+      padding: 10px 0;
+      min-width: 160px;
+      z-index: 1000;
+    }
 
-.hero {
-  background: url('images/hero_bg.jpg') center/cover no-repeat;
-  text-align: center;
-  padding: 140px 20px 160px;
-  position: relative;
-}
+    .dropdown-menu li {
+      padding: 8px 16px;
+    }
 
-.hero-overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.85));
-  z-index: 1;
-}
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
 
-.hero-text {
-  position: relative;
-  z-index: 2;
-  padding: 30px;
-  max-width: 90%;
-}
+    .hero {
+      background: url('images/hero_bg.jpg') center/cover no-repeat;
+      position: relative;
+      padding: 180px 20px 200px;
+      text-align: center;
+    }
 
-.hero h1 {
-  font-size: 3.5rem;
-  color: #f5c000;
-  margin-bottom: 20px;
-}
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.85));
+      z-index: 1;
+    }
 
-.hero p {
-  font-size: 1.25rem;
-  line-height: 1.5;
-  font-weight: 300;
-  color: #ffffff;
-}
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      max-width: 90%;
+      margin: 0 auto;
+    }
 
-section {
-  text-align: center;
-  padding: 80px 20px;
-}
+    .hero h1 {
+      font-size: 3.5rem;
+      color: #f5c000;
+      margin-bottom: 20px;
+    }
 
-.divider {
-  margin: 40px auto;
-  display: block;
-  height: auto;
-  max-width: 300px;
-}
+    .hero p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #fff;
+    }
 
-h2, h3 {
-  font-size: 2.5rem;
-  color: gold;
-}
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-p {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 20px auto;
-  line-height: 1.7;
-}
+    .divider {
+      display: block;
+      margin: 40px auto;
+      max-width: 300px;
+    }
 
-.section-button {
-  display: inline-block;
-  margin: 10px 10px;
-  padding: 10px 20px;
-  border: 1px solid gold;
-  color: gold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+    h2 {
+      font-size: 2.5rem;
+      color: gold;
+    }
 
-.section-button:hover {
-  background: gold;
-  color: #000;
-}
+    p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.7;
+    }
 
-.button-group {
-  text-align: center;
-}
+    .section-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border: 1px solid gold;
+      color: gold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
 
-.social-icons img {
-  height: 32px;
-  margin: 0 8px;
-  transition: transform 0.3s;
-}
+    .section-button:hover {
+      background: gold;
+      color: #000;
+    }
 
-.social-icons img:hover {
-  transform: scale(1.2);
-}
+    .button-group {
+      text-align: center;
+    }
 
-iframe {
-  width: 100%;
-  max-width: 660px;
-  border-radius: 12px;
-  height: 352px;
-}
+    .social-icons img {
+      height: 32px;
+      margin: 0 8px;
+      transition: transform 0.3s;
+    }
 
-footer {
-  text-align: center;
-  padding: 40px 10px;
-  font-size: 0.9rem;
-  color: #888;
-}
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
 
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
+    footer {
+      text-align: center;
+      padding: 40px 10px;
+      font-size: 0.9rem;
+      color: #888;
+    }
 
-  .hero p,
-  p {
-    font-size: 1rem;
-  }
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: flex;
+      }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-  }
-}
+      .nav-links {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background: #000;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px;
+      }
 
+      .nav-links.active {
+        display: flex;
+      }
+
+      .dropdown-menu {
+        position: static;
+      }
+    }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    });
+  </script>
 </head>
-<body><!-- PAGE CONTENT GOES HERE --></body>
+<body>
+
+  <nav>
+    <div class="nav-title">Finn Ominal</div>
+    <div class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bio.html">Bio</a></li>
+      <li class="dropdown">
+        <a href="#">Music ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="songs.html">Songs</a></li>
+          <li><a href="releases.html">Artist Releases</a></li>
+          <li><a href="beats.html">Beats</a></li>
+          <li><a href="scores.html">Film Scores</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Visuals ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="graphics.html">Graphics</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Connect</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Enter the Sound</h1>
+      <p>Music. Visuals. Movement.<br>Beats by Finn Ominal of Urban MindState.</p>
+    </div>
+  </section>
+
+  <img class="divider" src="images/section_divider.jpg" alt="divider" />
+
+  <section>
+    <h2>The Story</h2>
+    <p>
+      Finn Ominal is a producer, storyteller, and creative born in Flatbush, Brooklyn.<br>
+      Through genre-blending beats and raw emotional soundscapes, he builds sonic<br>
+      worlds that connect and empower. A member of Urban MindState and East Side City<br>
+      Music, his work is rooted in culture, identity, and purpose.
+    </p>
+    <div class="button-group">
+      <a class="section-button" href="bio.html">Full Bio →</a>
+    </div>
+  </section>
+
+  <img class="divider" src="images/section_divider.jpg" alt="divider" />
+
+  <section>
+    <h2>Music Preview</h2>
+    <p>🔥 Upcoming: <strong>Divine Times</strong> by <strong>Li63rty</strong> — dropping Dec 26, 2025</p>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2EBkg2cSOSoz7qJCoHqB3Z?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <div class="button-group">
+      <a class="section-button" href="songs.html">Songs</a>
+      <a class="section-button" href="beats.html">Beats</a>
+      <a class="section-button" href="releases.html">Releases</a>
+      <a class="section-button" href="scores.html">Film Scores</a>
+    </div>
+  </section>
+
+  <img class="divider" src="images/section_divider.jpg" alt="divider" />
+
+  <section>
+    <h2>Visuals</h2>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
+      <img src="images/pic_01.png" alt="visual 1" width="100" />
+      <img src="images/pic_02.png" alt="visual 2" width="100" />
+      <img src="images/pic_04.png" alt="visual 3" width="100" />
+    </div>
+    <div class="button-group">
+      <a class="section-button" href="videos.html">More Visuals →</a>
+    </div>
+  </section>
+
+  <img class="divider" src="images/section_divider.jpg" alt="divider" />
+
+  <section>
+    <h2>Connect with Me</h2>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/finnominalbeats/" target="_blank"><img src="images/socialmedia_icons/IG_FinnOminal.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/FinnOminalBeats" target="_blank"><img src="images/socialmedia_icons/FB_FinnOminal.png" alt="Facebook"></a>
+      <a href="https://www.tiktok.com/@finnominalbeats" target="_blank"><img src="images/socialmedia_icons/TikTok_FinnOminal.png" alt="TikTok"></a>
+      <a href="https://x.com/FinnOminalBeats" target="_blank"><img src="images/socialmedia_icons/X_FinnOminal.png" alt="X (Twitter)"></a>
+      <a href="https://www.threads.com/@finnominalbeats" target="_blank"><img src="images/socialmedia_icons/Threads_FinnOminal.png" alt="Threads"></a>
+      <a href="https://open.spotify.com/artist/1dx9nKXoz9zopfNN9EDTf4" target="_blank"><img src="images/socialmedia_icons/Spotify_FinnOminal.png" alt="Spotify"></a>
+      <a href="https://www.youtube.com/channel/UC2jaDGZcd-fTNZGVJE_j7yg" target="_blank"><img src="images/socialmedia_icons/YT_FinnOminal.png" alt="YouTube"></a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Finn Ominal. All rights reserved.
+  </footer>
+</body>
 </html>
