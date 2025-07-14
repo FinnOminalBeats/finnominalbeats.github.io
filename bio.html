@@ -1,140 +1,154 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Finn Ominal | Bio</title>
-  <link rel="icon" href="images/favicon.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Finn Ominal</title>
+  <link rel="icon" href="images/favicon.png">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
     body {
+      margin: 0;
       font-family: 'Orbitron', sans-serif;
       background: url('images/texture_dark.png') repeat;
-      background-size: cover;
       color: #f5f5f5;
-    }
-    nav {
-      background: #000;
-      color: gold;
-      padding: 10px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    nav h1 {
-      font-size: 1.5rem;
-    }
-    .nav-toggle {
-      display: none;
-      font-size: 2rem;
-      cursor: pointer;
-    }
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-    }
-    .nav-links a {
-      color: gold;
-      text-decoration: none;
-    }
-    .dropdown {
-      position: relative;
-    }
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      background: #111;
-      top: 100%;
-      left: 0;
-      list-style: none;
-      padding: 10px 0;
-    }
-    .dropdown:hover .dropdown-menu {
-      display: block;
-    }
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background: #000;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 10px;
-      }
-      .nav-links.active {
-        display: flex;
-      }
-      .nav-toggle {
-        display: block;
-      }
-    }
-    .container {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      font-size: 2.5rem;
-      text-align: center;
-      color: gold;
-      margin-bottom: 20px;
-    }
-    .bio-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-    .bio-content img {
-      max-width: 300px;
-      border-radius: 10px;
-    }
-    .bio-text {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      max-width: 700px;
-      text-align: center;
-    }
-    .social-icons {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .social-icons img {
-      height: 32px;
-      margin: 0 8px;
-      transition: transform 0.3s;
-    }
-    .social-icons img:hover {
-      transform: scale(1.2);
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #888;
-    }
+    }nav {
+  background: #000;
+  color: gold;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: gold;
+  text-decoration: none;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #111;
+  padding: 10px 0;
+  min-width: 160px;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.container {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.container img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  color: gold;
+}
+
+.container p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.social-icons {
+  margin-top: 40px;
+}
+
+.social-icons img {
+  height: 32px;
+  margin: 0 8px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  text-align: center;
+  padding: 40px 10px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    width: 200px;
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu {
+    position: static;
+    display: block;
+  }
+}
+
   </style>
-  <script>
-    function toggleMenu() {
-      const navLinks = document.querySelector('.nav-links');
-      navLinks.classList.toggle('active');
-    }
-  </script>
 </head>
 <body>
   <nav>
-    <h1>Finn Ominal</h1>
-    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
-    <ul class="nav-links">
+    <div class="logo">Finn Ominal</div>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <ul class="nav-links" id="navMenu">
       <li><a href="index.html">Home</a></li>
       <li><a href="bio.html">Bio</a></li>
       <li class="dropdown">
@@ -155,30 +169,31 @@
       </li>
       <li><a href="contact.html">Connect</a></li>
     </ul>
-  </nav>  <div class="container">
-    <h2>About Finn Ominal</h2>
-    <div class="bio-content">
-      <img src="images/finn_protrait.jpg" alt="Finn Ominal portrait">
-      <div class="bio-text">
-        <p>Finn Ominal is a music producer, storyteller, and creative force born in Flatbush, Brooklyn. With over 20 years of experience and a deep passion for music creation, he brings a versatile sound that fuses Hip Hop, R&B, Dancehall, Soca, Reggae, Afrobeats, Amapiano, and cinematic film scores.</p>
-        <p>Finn is one half of the production duo Urban MindState, alongside fellow producer Muzique By Blow. He’s also a member of the East Side City Music collective, where collaboration and cultural storytelling take center stage. His foundation in music production and audio engineering was sharpened at Full Sail University, fueling his commitment to both the craft and the message behind it.</p>
-        <p>Currently, Finn is producing a wave of new releases under a bold new brand. The upcoming album <strong>Divine Times</strong> by artist <strong>Li63rty</strong> drops December 26, 2025, kicking off a series of singles and a new creative era.</p>
-        <p>Outside the studio, Finn is a multi-talented creative — a graphic designer, video editor, and DIY crafter who brings his storytelling skills into every medium. Whether it’s sound, visuals, or hands-on creations, his work is grounded in emotion, identity, and purpose.</p>
-        <p>At the heart of it all, Finn’s mission is clear: to give his family a life of freedom, love, and laughter — and to reach others through music that speaks truth, shares culture, and tells meaningful stories.</p>
-      </div>
-    </div><div class="social-icons">
-  <h3>Connect with Me</h3>
+  </nav>  <section class="container">
+    <img src="images/pic_04.png" alt="Finn Ominal Portrait">
+    <h1>About Finn Ominal</h1>
+    <p>
+      Finn Ominal is a music producer, storyteller, and creative force born in Flatbush, Brooklyn.<br><br>
+      With over 20 years of experience and a deep passion for music creation, he brings a versatile sound that fuses Hip Hop, R&B, Dancehall, Soca, Reggae, Afrobeats, Amapiano, and cinematic film scores.<br><br>
+      Finn is one half of the production duo Urban MindState, alongside fellow producer Muzique By Blow. He’s also a member of the East Side City Music collective, where collaboration and cultural storytelling take center stage.<br><br>
+      His foundation in music production and audio engineering was sharpened at Full Sail University, fueling his commitment to both the craft and the message behind it.<br><br>
+      Outside the studio, Finn is a multi-talented creative — a graphic designer, video editor, and DIY crafter who brings his storytelling skills into every medium.<br><br>
+      At the heart of it all, Finn’s mission is clear: to give his family a life of freedom, love, and laughter — and to reach others through music that speaks truth, shares culture, and tells meaningful stories.
+    </p><div class="social-icons">
   <a href="https://www.instagram.com/finnominalbeats/" target="_blank"><img src="images/socialmedia_icons/IG_FinnOminal.png" alt="Instagram"></a>
   <a href="https://www.facebook.com/FinnOminalBeats" target="_blank"><img src="images/socialmedia_icons/FB_FinnOminal.png" alt="Facebook"></a>
   <a href="https://www.tiktok.com/@finnominalbeats" target="_blank"><img src="images/socialmedia_icons/TikTok_FinnOminal.png" alt="TikTok"></a>
-  <a href="https://x.com/FinnOminalBeats" target="_blank"><img src="images/socialmedia_icons/X_FinnOminal.png" alt="X (Twitter)"></a>
+  <a href="https://x.com/FinnOminalBeats" target="_blank"><img src="images/socialmedia_icons/X_FinnOminal.png" alt="X"></a>
   <a href="https://www.threads.com/@finnominalbeats" target="_blank"><img src="images/socialmedia_icons/Threads_FinnOminal.png" alt="Threads"></a>
   <a href="https://open.spotify.com/artist/1dx9nKXoz9zopfNN9EDTf4" target="_blank"><img src="images/socialmedia_icons/Spotify_FinnOminal.png" alt="Spotify"></a>
   <a href="https://www.youtube.com/channel/UC2jaDGZcd-fTNZGVJE_j7yg" target="_blank"><img src="images/socialmedia_icons/YT_FinnOminal.png" alt="YouTube"></a>
 </div>
 
-  </div>  <footer>
+  </section>  <footer>
     &copy; 2025 Finn Ominal. All rights reserved.
-  </footer>
-</body>
+  </footer>  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+  </script></body>
 </html>
