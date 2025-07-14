@@ -20,31 +20,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 30px;
   position: sticky;
   top: 0;
   z-index: 999;
 }
 
 nav h1 {
-  font-size: 1.4rem;
-  margin: 0;
-}
-
-.menu-toggle {
-  display: none;
   font-size: 1.5rem;
-  cursor: pointer;
-  color: gold;
+  margin: 0;
 }
 
 .nav-links {
   display: flex;
   gap: 30px;
-  list-style: none;
+  position: relative;
 }
 
 .nav-links li {
+  list-style: none;
   position: relative;
 }
 
@@ -62,53 +56,26 @@ nav h1 {
 .dropdown-menu {
   display: none;
   position: absolute;
-  background: #111;
   top: 100%;
   left: 0;
+  background: #111;
+  padding: 10px 0;
   min-width: 160px;
-  z-index: 1000;
 }
 
 .dropdown-menu li {
-  padding: 10px;
+  padding: 8px 16px;
 }
 
-.nav-links li:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
   display: block;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background: #000;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 20px;
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .dropdown-menu {
-    position: static;
-    background: #111;
-    padding-left: 20px;
-  }
 }
 
 .hero {
   background: url('images/hero_bg.jpg') center/cover no-repeat;
   text-align: center;
-  padding: 200px 20px 240px;
+  padding: 140px 20px 160px;
   position: relative;
 }
 
@@ -141,18 +108,9 @@ nav h1 {
   color: #ffffff;
 }
 
-h2, h3 {
-  font-size: 2.5rem;
-  color: gold;
+section {
   text-align: center;
-}
-
-p {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 20px auto;
-  line-height: 1.7;
-  text-align: center;
+  padding: 80px 20px;
 }
 
 .divider {
@@ -162,9 +120,21 @@ p {
   max-width: 300px;
 }
 
+h2, h3 {
+  font-size: 2.5rem;
+  color: gold;
+}
+
+p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 1.7;
+}
+
 .section-button {
   display: inline-block;
-  margin: 10px;
+  margin: 10px 10px;
   padding: 10px 20px;
   border: 1px solid gold;
   color: gold;
@@ -177,114 +147,52 @@ p {
   color: #000;
 }
 
-.social-icons {
+.button-group {
   text-align: center;
-  padding: 60px 10px 20px;
 }
 
-.social-icons h2 {
-  font-size: 2rem;
-  color: gold;
-  margin-bottom: 20px;
-}
-
-.social-icons a img {
+.social-icons img {
   height: 32px;
-  margin: 0 10px;
+  margin: 0 8px;
   transition: transform 0.3s;
 }
 
-.social-icons a img:hover {
+.social-icons img:hover {
   transform: scale(1.2);
+}
+
+iframe {
+  width: 100%;
+  max-width: 660px;
+  border-radius: 12px;
+  height: 352px;
 }
 
 footer {
   text-align: center;
-  padding: 20px 10px;
+  padding: 40px 10px;
   font-size: 0.9rem;
-  color: #aaa;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p,
+  p {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
 }
 
   </style>
 </head>
-<body>
-  <nav>
-    <h1>Finn Ominal</h1>
-    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-    <ul class="nav-links" id="navMenu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="bio.html">Bio</a></li>
-      <li class="dropdown">
-        <a href="#">Music ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="songs.html">Songs</a></li>
-          <li><a href="releases.html">Artist Releases</a></li>
-          <li><a href="beats.html">Beats</a></li>
-          <li><a href="scores.html">Film Scores</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">Visuals ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="videos.html">Videos</a></li>
-          <li><a href="graphics.html">Graphics</a></li>
-        </ul>
-      </li>
-      <li><a href="contact.html">Connect</a></li>
-    </ul>
-  </nav>  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-text">
-      <h1>Enter the Sound</h1>
-      <p>Music. Visuals. Movement.<br>Beats by Finn Ominal of Urban MindState.</p>
-    </div>
-  </section>  <img class="divider" src="images/section_divider.jpg" alt="divider" />  <section>
-    <h3>The Story</h3>
-    <p>Finn Ominal is a producer, storyteller, and creative born in Flatbush, Brooklyn.<br>
-    Through genre-blending beats and raw emotional soundscapes, he builds sonic<br>
-    worlds that connect and empower. A member of Urban MindState and East Side City<br>
-    Music, his work is rooted in culture, identity, and purpose.</p>
-    <a class="section-button" href="bio.html">Full Bio →</a>
-  </section>  <img class="divider" src="images/section_divider.jpg" alt="divider" />  <section>
-    <h3>Music Preview</h3>
-    <p>🔥 Upcoming: <strong>Divine Times</strong> by <strong>Li63rty</strong> — dropping Dec 26, 2025</p>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2EBkg2cSOSoz7qJCoHqB3Z?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    <div>
-      <a class="section-button" href="songs.html">Songs</a>
-      <a class="section-button" href="beats.html">Beats</a>
-      <a class="section-button" href="releases.html">Releases</a>
-      <a class="section-button" href="scores.html">Film Scores</a>
-    </div>
-  </section>  <img class="divider" src="images/section_divider.jpg" alt="divider" />  <section>
-    <h3>Visuals</h3>
-    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-      <img src="images/pic_01.png" alt="visual 1" width="100" />
-      <img src="images/pic_02.png" alt="visual 2" width="100" />
-      <img src="images/pic_04.png" alt="visual 3" width="100" />
-    </div>
-    <a class="section-button" href="graphics.html">More Visuals →</a>
-  </section>  <img class="divider" src="images/section_divider.jpg" alt="divider" />  <div class="social-icons">
-    <h2>Connect with Me</h2>
-    <a href="https://www.instagram.com/finnominalbeats/" target="_blank"><img src="images/socialmedia_icons/IG_FinnOminal.png" alt="Instagram"></a>
-    <a href="https://www.facebook.com/FinnOminalBeats" target="_blank"><img src="images/socialmedia_icons/FB_FinnOminal.png" alt="Facebook"></a>
-    <a href="https://www.tiktok.com/@finnominalbeats" target="_blank"><img src="images/socialmedia_icons/TikTok_FinnOminal.png" alt="TikTok"></a>
-    <a href="https://x.com/FinnOminalBeats" target="_blank"><img src="images/socialmedia_icons/X_FinnOminal.png" alt="X"></a>
-    <a href="https://www.threads.com/@finnominalbeats" target="_blank"><img src="images/socialmedia_icons/Threads_FinnOminal.png" alt="Threads"></a>
-    <a href="https://open.spotify.com/artist/1dx9nKXoz9zopfNN9EDTf4" target="_blank"><img src="images/socialmedia_icons/Spotify_FinnOminal.png" alt="Spotify"></a>
-    <a href="https://www.youtube.com/channel/UC2jaDGZcd-fTNZGVJE_j7yg" target="_blank"><img src="images/socialmedia_icons/YT_FinnOminal.png" alt="YouTube"></a>
-  </div>  <footer>
-    &copy; 2025 Finn Ominal. All rights reserved.
-  </footer>  <script>
-    function toggleMenu() {
-      const navMenu = document.getElementById('navMenu');
-      navMenu.classList.toggle('active');
-    }
-
-    document.addEventListener('click', function (e) {
-      const nav = document.querySelector('nav');
-      if (!nav.contains(e.target)) {
-        document.getElementById('navMenu').classList.remove('active');
-      }
-    });
-  </script></body>
+<body><!-- PAGE CONTENT GOES HERE --></body>
 </html>
