@@ -1,0 +1,285 @@
+/* Import Orbitron Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* CSS Variables */
+:root {
+  --brand-gold: #f5c000;
+  --brand-black: #000;
+  --text-light: #f5f5f5;
+  --text-muted: #888;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: url('images/texture_dark.png') repeat;
+  background-size: cover;
+  color: var(--text-light);
+}
+
+/* Header & Navigation */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: var(--brand-black);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.nav-title,
+nav h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: var(--brand-gold);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--brand-gold);
+  margin: 4px 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: var(--brand-gold);
+  text-decoration: none;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Dropdowns */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #111;
+  padding: 10px 0;
+  min-width: 160px;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('images/hero_bg.jpg') center/cover no-repeat;
+  padding: 180px 20px 200px;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.85));
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: var(--brand-gold);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 300;
+  color: var(--text-light);
+}
+
+/* Main & Sections */
+main {
+  padding: 0;
+}
+
+section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.divider {
+  display: block;
+  margin: 40px auto;
+  max-width: 300px;
+  height: auto;
+}
+
+.content figure {
+  margin: 0 auto 20px;
+  max-width: 300px;
+}
+
+.text-block {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+h2,
+h3 {
+  font-size: 2.5rem;
+  color: var(--brand-gold);
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 1.7;
+}
+
+/* Buttons */
+.section-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid var(--brand-gold);
+  color: var(--brand-gold);
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.section-button:hover,
+.section-button:focus-visible {
+  background: var(--brand-gold);
+  color: var(--brand-black);
+  outline: none;
+}
+
+.button-group {
+  text-align: center;
+}
+
+/* Social Icons */
+.social-icons img {
+  height: 32px;
+  margin: 0 8px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover,
+.social-icons img:focus-visible {
+  transform: scale(1.2);
+  outline: none;
+}
+
+/* Embeds */
+iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 352px;
+  border-radius: 12px;
+  border: none;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 10px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  background: var(--brand-black);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    background: var(--brand-black);
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static;
+  }
+
+  .hero {
+    padding: 120px 20px 140px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p,
+  p {
+    font-size: 1rem;
+  }
+}
