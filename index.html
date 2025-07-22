@@ -7,239 +7,7 @@
   <title>Finn Ominal | Home</title>
   <link rel="icon" href="images/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background-image: url('images/texture_dark.png');
-      background-repeat: repeat;
-      color: #f5f5f5;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: #000;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: gold;
-      padding: 10px 30px;
-    }
-
-    .nav-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    .nav-toggle span {
-      display: block;
-      height: 3px;
-      width: 25px;
-      background: gold;
-      margin: 4px 0;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav-links li {
-      position: relative;
-    }
-
-    .nav-links a {
-      color: gold;
-      text-decoration: none;
-      font-size: 0.95rem;
-      white-space: nowrap;
-    }
-
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #111;
-      padding: 10px 0;
-      min-width: 160px;
-    }
-
-    .dropdown-menu li {
-      padding: 8px 16px;
-    }
-
-    .dropdown:hover .dropdown-menu,
-    .dropdown:focus-within .dropdown-menu {
-      display: block;
-    }
-
-    .hero {
-      position: relative;
-      background: url('images/hero_bg.jpg') center/cover no-repeat;
-      padding: 180px 20px 200px;
-      text-align: center;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.85));
-      z-index: 1;
-    }
-
-    .hero-text {
-      position: relative;
-      z-index: 2;
-      max-width: 90%;
-      margin: 0 auto;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      color: #f5c000;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      font-weight: 300;
-      color: #fff;
-      line-height: 1.4;
-    }
-
-    main {
-      padding: 0;
-    }
-
-    section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .divider {
-      display: block;
-      margin: 40px auto;
-      max-width: 300px;
-    }
-
-    h2 {
-      font-size: 2.5rem;
-      color: gold;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 20px auto;
-      line-height: 1.7;
-    }
-
-    .section-button {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      border: 1px solid gold;
-      color: gold;
-      text-decoration: none;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-
-    .section-button:hover {
-      background: gold;
-      color: #000;
-    }
-
-    .button-group {
-      text-align: center;
-    }
-
-    .social-icons img {
-      height: 32px;
-      margin: 0 8px;
-      transition: transform 0.3s;
-    }
-
-    .social-icons img:hover {
-      transform: scale(1.2);
-    }
-
-    iframe.spotify-embed {
-      border-radius: 12px;
-      width: 100%;
-      max-width: 800px;
-      height: 352px;
-      border: none;
-      margin: 20px auto;
-      display: block;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 10px;
-      font-size: 0.9rem;
-      color: #888;
-      background: #000;
-    }
-
-    @media (max-width: 768px) {
-      .nav-toggle {
-        display: block;
-      }
-
-      .nav-links {
-        flex-direction: column;
-        display: none;
-        width: 100%;
-        background: #000;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .dropdown-menu {
-        position: static;
-      }
-
-      .hero {
-        padding: 120px 20px 140px;
-      }
-
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-    }
-  </style>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggle = document.querySelector(".nav-toggle");
-      const navLinks = document.querySelector(".nav-links");
-      toggle.addEventListener("click", () => navLinks.classList.toggle("active"));
-    });
-  </script>
+  <script defer src="scripts/navigation.js"></script>
 </head>
 <body>
   <header>
@@ -275,27 +43,21 @@
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-text">
-        <h1>
-          
-        </h1>
+        <h1>Enter the Sound</h1>
         <p>Music. Visuals. Movement.<br>Beats by Finn Ominal of Urban MindState.</p>
       </div>
     </section>
 
     <img class="divider" src="images/section_divider.jpg" alt="decorative divider" role="presentation" />
 
+    <!-- Story -->
     <section id="story">
       <h2>The Story</h2>
-      <p>
-        Finn Ominal is a producer, storyteller, and creative born in Flatbush, Brooklyn.<br>
-        Through genre-blending beats and raw emotional soundscapes, he builds sonic<br>
-        worlds that connect and empower. A member of Urban MindState and East Side City<br>
-        Music, his work is rooted in culture, identity, and purpose.
-<|diff_marker|>">
-      </p>
+      <p>Finn Ominal is a producer, storyteller, and creative born in Flatbush, Brooklyn. Through genre-blending beats and raw emotional soundscapes, he builds sonic worlds that connect and empower. A member of Urban MindState and East Side City Music, his work is rooted in culture, identity, and purpose.</p>
       <div class="button-group">
         <a class="section-button" href="bio.html">Full Bio →</a>
       </div>
@@ -303,10 +65,11 @@
 
     <img class="divider" src="images/section_divider.jpg" alt="decorative divider" role="presentation" />
 
+    <!-- Music Preview -->
     <section id="music-preview">
       <h2>Music Preview</h2>
       <p>🔥 Upcoming: <strong>Divine Times</strong> by <strong>Li63rty</strong> — dropping Dec 26, 2025</p>
-      <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/2EBkg2cSOSoz7qJCoHqB3Z?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe src="https://open.spotify.com/embed/track/2EBkg2cSOSoz7qJCoHqB3Z?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       <div class="button-group">
         <a class="section-button" href="songs.html">Songs</a>
         <a class="section-button" href="beats.html">Beats</a>
@@ -317,12 +80,13 @@
 
     <img class="divider" src="images/section_divider.jpg" alt="decorative divider" role="presentation" />
 
+    <!-- Visuals -->
     <section id="visuals">
       <h2>Visuals</h2>
-      <div class="visual-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
-        <figure><img src="images/pic_01.png" alt="Graphic visual 1" width="100" /></figure>
-        <figure><img src="images/pic_02.png" alt="Graphic visual 2" width="100" /></figure>
-        <figure><img src="images/pic_04.png" alt="Graphic visual 3" width="100" /></figure>
+      <div class="visual-grid">
+        <figure><img src="images/pic_01.png" alt="Graphic visual 1"></figure>
+        <figure><img src="images/pic_02.png" alt="Graphic visual 2"></figure>
+        <figure><img src="images/pic_04.png" alt="Graphic visual 3"></figure>
       </div>
       <div class="button-group">
         <a class="section-button" href="videos.html">More Visuals →</a>
@@ -331,6 +95,7 @@
 
     <img class="divider" src="images/section_divider.jpg" alt="decorative divider" role="presentation" />
 
+    <!-- Connect -->
     <section id="connect">
       <h2>Connect with Me</h2>
       <div class="social-icons">
