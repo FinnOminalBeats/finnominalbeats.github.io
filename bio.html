@@ -7,13 +7,7 @@
   <title>Finn Ominal | About</title>
   <link rel="icon" href="images/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggle = document.querySelector(".nav-toggle");
-      const navLinks = document.querySelector(".nav-links");
-      toggle.addEventListener("click", () => navLinks.classList.toggle("active"));
-    });
-  </script>
+  <script defer src="scripts/navigation.js"></script>
 </head>
 <body>
   <header>
@@ -49,6 +43,7 @@
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-text">
@@ -59,9 +54,10 @@
 
     <img class="divider" src="images/section_divider.jpg" alt="decorative divider" role="presentation" />
 
+    <!-- Bio Content -->
     <section class="content">
       <figure>
-        <img src="images/pic_04.png" alt="Portrait of Finn Ominal" />
+        <img src="images/pic_04.png" alt="Portrait of Finn Ominal">
       </figure>
       <div class="text-block">
         <p>With over 20 years of experience and a deep passion for music creation, Finn Ominal brings a versatile sound that fuses Hip Hop, R&B, Dancehall, Soca, Reggae, Afrobeats, Amapiano, and cinematic film scores.</p>
@@ -74,6 +70,7 @@
 
     <img class="divider" src="images/section_divider.jpg" alt="decorative divider" role="presentation" />
 
+    <!-- Connect -->
     <section id="connect">
       <h2>Connect with Me</h2>
       <div class="social-icons">
