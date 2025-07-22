@@ -1,273 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Finn Ominal | About Finn Ominal</title>
-  <link rel="icon" href="images/favicon.png" />
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: url('images/texture_dark.png') repeat;
-      background-size: cover;
-      color: #f5f5f5;
-    }
-
-    nav {
-      background: #000;
-      color: gold;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 30px;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    nav h1 {
-      font-size: 1.5rem;
-      margin: 0;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-      position: relative;
-    }
-
-    .nav-links li {
-      list-style: none;
-      position: relative;
-    }
-
-    .nav-links a {
-      color: gold;
-      text-decoration: none;
-      font-size: 0.95rem;
-      white-space: nowrap;
-    }
-
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
-
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #111;
-      padding: 10px 0;
-      min-width: 160px;
-    }
-
-    .dropdown-menu li {
-      padding: 8px 16px;
-    }
-
-    .dropdown:hover .dropdown-menu,
-    .dropdown:focus-within .dropdown-menu {
-      display: block;
-    }
-
-    .hero {
-      background: url('images/hero_bg.jpg') center/cover no-repeat;
-      text-align: center;
-      padding: 140px 20px 160px;
-      position: relative;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.85));
-      z-index: 1;
-    }
-
-    .hero-text {
-      position: relative;
-      z-index: 2;
-      padding: 30px;
-      max-width: 90%;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      color: #f5c000;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      line-height: 1.5;
-      font-weight: 300;
-      color: #ffffff;
-    }
-
-    section {
-      text-align: center;
-      padding: 80px 20px;
-    }
-
-    .divider {
-      margin: 40px auto;
-      display: block;
-      height: auto;
-      max-width: 300px;
-    }
-
-    h2, h3 {
-      font-size: 2.5rem;
-      color: gold;
-    }
-
-    p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 20px auto;
-      line-height: 1.7;
-    }
-
-    .section-button {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      border: 1px solid gold;
-      color: gold;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .section-button:hover {
-      background: gold;
-      color: #000;
-    }
-
-    .social-icons img {
-      height: 32px;
-      margin: 0 8px;
-      transition: transform 0.3s;
-    }
-
-    .social-icons img:hover {
-      transform: scale(1.2);
-    }
-
-    iframe {
-      width: 100%;
-      max-width: 660px;
-      border-radius: 12px;
-      height: 352px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 10px;
-      font-size: 0.9rem;
-      color: #888;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero p,
-      p {
-        font-size: 1rem;
-      }
-
-      .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artist releases by Finn Ominal: Featured singles and upcoming drops from Li63rty.">
+  <title>Finn Ominal | Artist Releases</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts/navigation.js"></script>
 </head>
 <body>
-  <nav>
-    <h1>Finn Ominal</h1>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="bio.html">Bio</a></li>
-      <li class="dropdown">
-        <a href="#">Music ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="songs.html">Songs</a></li>
-          <li><a href="releases.html">Artist Releases</a></li>
-          <li><a href="beats.html">Beats</a></li>
-          <li><a href="scores.html">Film Scores</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">Visuals ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="videos.html">Videos</a></li>
-          <li><a href="graphics.html">Graphics</a></li>
-        </ul>
-      </li>
-      <li><a href="contact.html">Connect</a></li>
-    </ul>
-  </nav>
-  
-  <section>
-    <h2>🎧 Featured Release</h2>
-    <p><strong>Make It Home</strong> — Li63rty<br>Produced by Finn Ominal</p>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2EBkg2cSOSoz7qJCoHqB3Z?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </section>  <img class="divider" src="images/section_divider.jpg" alt="divider" />  <!-- Upcoming Releases -->  <section>
-    <h2>Upcoming Releases</h2>
-    <ul style="list-style: none; padding: 0; font-size: 1.1rem;">
-      <li><strong>1. Make It Home</strong> — Drops <em>June 13, 2025</em></li>
-      <li><strong>2. Forward</strong> — Drops <em>July 4, 2025</em></li>
-      <li><strong>3. Hooked</strong> — Drops <em>July 25, 2025</em></li>
-      <li><strong>4. Stuck On You</strong> — Drops <em>August 15, 2025</em></li>
-      <li><strong>5. It’s My Calling</strong> — Drops <em>September 5, 2025</em></li>
-      <li><strong>6. Keep It NY</strong> — Drops <em>September 26, 2025</em></li>
-      <li><strong>7. The Way I Work</strong> — Drops <em>October 17, 2025</em></li>
-      <li><strong>8. Pressure</strong> — Drops <em>November 7, 2025</em></li>
-      <li><strong>9. The Night Goes</strong> — Drops <em>November 28, 2025</em></li>
-    </ul>
-  </section>  <img class="divider" src="images/section_divider.jpg" alt="divider" />  <!-- Full Catalog -->  <section>
-    <h2>🎶 Stream the Full Catalog</h2>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/1dx9nKXoz9zopfNN9EDTf4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </section>  <img class="divider" src="images/section_divider.jpg" alt="divider" />  <!-- East Side City Music -->  <section>
-    <h2>🎤 East Side City Music</h2>
-    <p>This collective is built on collaboration, culture, and sound evolution. Meet the artists moving with intention.</p>
-    <ul style="list-style: none; font-size: 1.2rem; padding: 0;">
-      <li>• Li63rty</li>
-      <li>• SparklesDiDiva</li>
-      <li>• Fr33dom Z3us</li>
-      <li>• Baggie Bags</li>
-      <li>• Muzique By Blow (Producer)</li>
-    </ul>
-  </section>  <img class="divider" src="images/section_divider.jpg" alt="divider" />  <!-- Connect with Me Section -->  <section>
-    <h2>Connect with Me</h2>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/finnominalbeats/" target="_blank"><img src="images/socialmedia_icons/IG_FinnOminal.png" alt="Instagram"></a>
-      <a href="https://www.facebook.com/FinnOminalBeats" target="_blank"><img src="images/socialmedia_icons/FB_FinnOminal.png" alt="Facebook"></a>
-      <a href="https://www.tiktok.com/@finnominalbeats" target="_blank"><img src="images/socialmedia_icons/TikTok_FinnOminal.png" alt="TikTok"></a>
-      <a href="https://x.com/FinnOminalBeats" target="_blank"><img src="images/socialmedia_icons/X_FinnOminal.png" alt="X (Twitter)"></a>
-      <a href="https://www.threads.com/@finnominalbeats" target="_blank"><img src="images/socialmedia_icons/Threads_FinnOminal.png" alt="Threads"></a>
-      <a href="https://open.spotify.com/artist/1dx9nKXoz9zopfNN9EDTf4" target="_blank"><img src="images/socialmedia_icons/Spotify_FinnOminal.png" alt="Spotify"></a>
-      <a href="https://www.youtube.com/channel/UC2jaDGZcd-fTNZGVJE_j7yg" target="_blank"><img src="images/socialmedia_icons/YT_FinnOminal.png" alt="YouTube"></a>
-    </div>
-  </section>  <footer>
-    &copy; 2025 Finn Ominal. All rights reserved.
-  </footer>  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggle = document.querySelector(".nav-toggle");
-      const navLinks = document.querySelector(".nav-links");
-      toggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
-    });
-  </script></body>
+  <header>
+    <nav aria-label="Primary Navigation">
+      <div class="nav-title">Finn Ominal</div>
+      <button class="nav-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bio.html">Bio</a></li>
+        <li class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Music ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="songs.html">Songs</a></li>
+            <li><a href="releases.html" aria-current="page">Artist Releases</a></li>
+            <li><a href="beats.html">Beats</a></li>
+            <li><a href="scores.html">Film Scores</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Visuals ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="graphics.html">Graphics</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-text">
+        <h1>Artist Releases</h1>
+        <p>Discover featured singles and upcoming drops.</p>
+      </div>
+    </section>
+
+    <img class="divider" src="images/section_divider.jpg" alt="decorative divider" role="presentation">
+
+    <!-- Featured Artist -->
+    <section id="featured-artist">
+      <h2>Featured Artist</h2>
+      <div class="embed-group">
+        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%; max-width:660px; overflow:hidden; border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/song/forward/1823496764" loading="lazy"></iframe>
+        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%; max-width:660px; overflow:hidden; border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/song/make-it-home/1817584194" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <img class="divider" src="images/section_divider.jpg" alt="decorative divider" role="presentation">
+
+    <!-- Upcoming Singles -->
+    <section id="upcoming-singles">
+      <h2>Li63rty’s Upcoming Singles</h2>
+      <ul class="text-block">
+        <li><strong>Hooked</strong> — Drops July 25, 2025</li>
+        <li><strong>Stuck On You</strong> — Drops August 15, 2025</li>
+        <li><strong>It’s My Calling</strong> — Drops September 5, 2025</li>
+        <li><strong>Keep It NY</strong> — Drops September 26, 2025</li>
+        <li><strong>The Way I Work</strong> — Drops October 17, 2025</li>
+        <li><strong>Pressure</strong> — Drops November 7, 2025</li>
+        <li><strong>The Night Goes</strong> — Drops November 28, 2025</li>
+      </ul>
+    </section>
+
+    <img class="divider" src="images/section_divider.jpg" alt="decorative divider" role="presentation">
+
+    <!-- Connect -->
+    <section id="connect">
+      <h2>Connect with Me</h2>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/finnominalbeats/" target="_blank" rel="noopener noreferrer"><img src="images/socialmedia_icons/IG_FinnOminal.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/FinnOminalBeats" target="_blank" rel="noopener noreferrer"><img src="images/socialmedia_icons/FB_FinnOminal.png" alt="Facebook"></a>
+        <a href="https://www.tiktok.com/@finnominalbeats" target="_blank" rel="noopener noreferrer"><img src="images/socialmedia_icons/TikTok_FinnOminal.png" alt="TikTok"></a>
+        <a href="https://x.com/FinnOminalBeats" target="_blank" rel="noopener noreferrer"><img src="images/socialmedia_icons/X_FinnOminal.png" alt="X"></a>
+        <a href="https://www.threads.com/@finnominalbeats" target="_blank" rel="noopener noreferrer"><img src="images/socialmedia_icons/Threads_FinnOminal.png" alt="Threads"></a>
+        <a href="https://open.spotify.com/artist/1dx9nKXoz9zopfNN9EDTf4" target="_blank" rel="noopener noreferrer"><img src="images/socialmedia_icons/Spotify_FinnOminal.png" alt="Spotify"></a>
+        <a href="https://www.youtube.com/channel/UC2jaDGZcd-fTNZGVJE_j7yg" target="_blank" rel="noopener noreferrer"><img src="images/socialmedia_icons/YT_FinnOminal.png" alt="YouTube"></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Finn Ominal. All rights reserved.</p>
+  </footer>
+</body>
 </html>
