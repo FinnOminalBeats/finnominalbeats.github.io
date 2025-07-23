@@ -1,280 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore released and upcoming singles by Finn Ominal.">
   <title>Finn Ominal | Songs</title>
-  <link rel="icon" href="images/favicon.png" />
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: url('images/texture_dark.png') repeat;
-      background-size: cover;
-      color: #f5f5f5;
-    }
-
-    nav {
-      background: #000;
-      color: gold;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 30px;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    nav h1 {
-      font-size: 1.5rem;
-      margin: 0;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-      position: relative;
-    }
-
-    .nav-links li {
-      list-style: none;
-      position: relative;
-    }
-
-    .nav-links a {
-      color: gold;
-      text-decoration: none;
-      font-size: 0.95rem;
-      white-space: nowrap;
-    }
-
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
-
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #111;
-      padding: 10px 0;
-      min-width: 160px;
-    }
-
-    .dropdown-menu li {
-      padding: 8px 16px;
-    }
-
-    .dropdown:hover .dropdown-menu,
-    .dropdown:focus-within .dropdown-menu {
-      display: block;
-    }
-
-    .hero {
-      background: url('images/hero_bg.jpg') center/cover no-repeat;
-      text-align: center;
-      padding: 140px 20px 160px;
-      position: relative;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.85));
-      z-index: 1;
-    }
-
-    .hero-text {
-      position: relative;
-      z-index: 2;
-      padding: 30px;
-      max-width: 90%;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      color: #f5c000;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      line-height: 1.5;
-      font-weight: 300;
-      color: #ffffff;
-    }
-
-    section {
-      text-align: center;
-      padding: 80px 20px;
-    }
-
-    .divider {
-      margin: 40px auto;
-      display: block;
-      height: auto;
-      max-width: 300px;
-    }
-
-    h2, h3 {
-      font-size: 2.5rem;
-      color: gold;
-    }
-
-    p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 20px auto;
-      line-height: 1.7;
-    }
-
-    .section-button {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      border: 1px solid gold;
-      color: gold;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .section-button:hover {
-      background: gold;
-      color: #000;
-    }
-
-    .social-icons img {
-      height: 32px;
-      margin: 0 8px;
-      transition: transform 0.3s;
-    }
-
-    .social-icons img:hover {
-      transform: scale(1.2);
-    }
-
-    iframe {
-      width: 100%;
-      max-width: 660px;
-      border-radius: 12px;
-      height: 352px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 10px;
-      font-size: 0.9rem;
-      color: #888;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero p,
-      p {
-        font-size: 1rem;
-      }
-
-      .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
-      }
-    }
-  </style>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts/navigation.js"></script>
 </head>
 <body>
-  <nav>
-    <h1>Finn Ominal</h1>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="bio.html">Bio</a></li>
-      <li class="dropdown">
-        <a href="#">Music ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="songs.html">Songs</a></li>
-          <li><a href="releases.html">Artist Releases</a></li>
-          <li><a href="beats.html">Beats</a></li>
-          <li><a href="scores.html">Film Scores</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#">Visuals ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="videos.html">Videos</a></li>
-          <li><a href="graphics.html">Graphics</a></li>
-        </ul>
-      </li>
-      <li><a href="contact.html">Connect</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav aria-label="Primary Navigation">
+      <div class="nav-title">Finn Ominal</div>
+      <button class="nav-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bio.html">Bio</a></li>
+        <li class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Music ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="songs.html" aria-current="page">Songs</a></li>
+            <li><a href="releases.html">Artist Releases</a></li>
+            <li><a href="beats.html">Beats</a></li>
+            <li><a href="scores.html">Film Scores</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Visuals ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="graphics.html">Graphics</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <section>
-    <h2>🎧 Featured Song: Make It Home</h2>
-    <p><strong>Artist:</strong> Li63rty<br>
-    <strong>Produced by:</strong> Finn Ominal</p>
-    <div class="embed-player">
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2EBkg2cSOSoz7qJCoHqB3Z?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
-  </section>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-text">
+        <h1>Songs</h1>
+        <p>Discover released and upcoming singles.</p>
+      </div>
+    </section>
 
-  <section>
-    <h2>📅 Upcoming Releases</h2>
-    <ul class="release-list">
-      <li><strong>1. Make It Home</strong> — June 13, 2025</li>
-      <li><strong>2. Forward</strong> — July 4, 2025</li>
-      <li><strong>3. Hooked</strong> — July 25, 2025</li>
-      <li><strong>4. Stuck On You</strong> — August 15, 2025</li>
-      <li><strong>5. It’s My Calling</strong> — September 5, 2025</li>
-      <li><strong>6. Keep It NY</strong> — September 26, 2025</li>
-      <li><strong>7. The Way I Work</strong> — October 17, 2025</li>
-      <li><strong>8. Pressure</strong> — November 7, 2025</li>
-      <li><strong>9. The Night Goes</strong> — November 28, 2025</li>
-    </ul>
-  </section>
+    <img class="divider" src="images/section_divider.jpg" alt="decorative divider" role="presentation">
 
-  <section>
-    <h2>🏙 East Side City Music</h2>
-    <p>Representing collaboration, culture, and creativity. Meet the artists of the collective:</p>
-    <ul class="release-list">
-      <li><strong>Li63rty</strong></li>
-      <li><strong>SparklesDiDiva</strong></li>
-      <li><strong>Fr33dom Z3us</strong></li>
-      <li><strong>Baggie Bags</strong></li>
-      <li><strong>Muzique By Blow</strong> (Producer)</li>
-    </ul>
-  </section>
+    <!-- Upcoming Singles -->
+    <section id="upcoming-singles">
+      <h2>Upcoming Singles</h2>
+      <ul class="text-block">
+        <li>
+          <figure>
+            <img src="cover_art/cloud9confessions_coverart.png" alt="Cloud 9 Confessions cover art">
+            <figcaption><strong>Cloud 9 Confessions</strong> — Releases August 19, 2025</figcaption>
+          </figure>
+          <div class="button-group">
+            <a class="section-button" href="https://distrokid.com/hyperfollow/finnominalbeats/cloud-9-confessions" target="_blank" rel="noopener noreferrer">Pre‑Save on DistroKid</a>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>🤖 AI-Assisted Music</h2>
-    <p>Finn Ominal blends human creativity with cutting-edge AI tools to shape the future of sound:</p>
-    <ul class="release-list">
-      <li><strong>Idea & Concept:</strong> Finn Ominal</li>
-      <li><strong>Custom MyGPT's:</strong> Trained on 20+ years of written material</li>
-      <li><strong>Tools:</strong> Suno Generator, Suno & FL Studio Stem Splitter</li>
-      <li><strong>Finalization:</strong> FL Studio for beatmaking, mixing, and mastering</li>
-    </ul>
-  </section>
+    <img class="divider" src="images/section_divider.jpg" alt="decorative divider" role="presentation">
 
-  <section>
-    <h2>🎹 Stream My Full Catalog</h2>
-    <div class="embed-player">
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/1dx9nKXoz9zopfNN9EDTf4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
-  </section>
+    <!-- Album In Progress -->
+    <section id="album-process">
+      <h2>Album In Progress: Between War and Peace</h2>
+      <figure>
+        <img src="cover_art/betweenwarandpeace_coverart.jpg" alt="Between War and Peace cover art">
+      </figure>
+      <div class="text-block">
+        <p>This is the first album from Finn Ominal. This is the perfect collection of thoughts, feelings, emotions, experiences, actions, regrets, denials, acceptances, pain and pleasure, good times and bad. This is my audio depiction of a war cry and a peace dream.</p>
+      </div>
+    </section>
+
+    <img class="divider" src="images/section_divider.jpg" alt="decorative divider" role="presentation">
+
+    <!-- Connect -->
+    <section id="connect">
+      <h2>Connect with Me</h2>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/finnominalbeats/" target="_blank" rel="noopener noreferrer"><img src="images/socialmedia_icons/IG_FinnOminal.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/FinnOminalBeats" target="_blank" rel="noopener noreferrer"><img src="images/socialmedia_icons/FB_FinnOminal.png" alt="Facebook"></a>
+        <a href="https://www.tiktok.com/@finnominalbeats" target="_blank" rel="noopener noreferrer"><img src="images/socialmedia_icons/TikTok_FinnOminal.png" alt="TikTok"></a>
+        <a href="https://x.com/FinnOminalBeats" target="_blank" rel="noopener noreferrer"><img src="images/socialmedia_icons/X_FinnOminal.png" alt="X"></a>
+        <a href="https://www.threads.com/@finnominalbeats" target="_blank" rel="noopener noreferrer"><img src="images/socialmedia_icons/Threads_FinnOminal.png" alt="Threads"></a>
+        <a href="https://open.spotify.com/artist/1dx9nKXoz9zopfNN9EDTf4" target="_blank" rel="noopener noreferrer"><img src="images/socialmedia_icons/Spotify_FinnOminal.png" alt="Spotify"></a>
+        <a href="https://www.youtube.com/channel/UC2jaDGZcd-fTNZGVJE_j7yg" target="_blank" rel="noopener noreferrer"><img src="images/socialmedia_icons/YT_FinnOminal.png" alt="YouTube"></a>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 Finn Ominal. All rights reserved.
+    <p>&copy; 2025 Finn Ominal. All rights reserved.</p>
   </footer>
 </body>
 </html>
-
