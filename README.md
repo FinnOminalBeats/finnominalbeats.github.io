@@ -29,7 +29,9 @@ card, Phenom's Muze + VibeVersX coming-soon) → Contact (business email + 9 soc
 ## Deploy (GitHub Pages)
 
 Copy the contents of this folder to the root of the `FinnOminalBeats/finnominalbeats.github.io` repo,
-commit, push. Pages serves it at https://finnominalbeats.github.io/ — no build config needed.
+commit, push. Pages serves it at **https://finnominal.net/** (custom domain via the `CNAME` file here —
+never delete it; registered at Cloudflare 2026-07-17, zone has 4 GitHub Pages A records + www CNAME,
+all DNS-only). The old https://finnominalbeats.github.io/ redirects automatically.
 
 ## Release-week swap (Jul 31)
 
