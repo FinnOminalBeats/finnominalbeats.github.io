@@ -361,6 +361,49 @@ strong { color: var(--paper); font-weight: 500; }
   .cd-num { font-size: 24px; }
 }
 
+.art-link { display: block; }
+.single-more { margin: 14px 0 0; font-size: 14px; letter-spacing: 0.04em; }
+.single-more a { border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+
+/* ---------- release page (/all-kind) ---------- */
+.release-top { padding-top: calc(var(--nav-h) + 46px); }
+.crumb {
+  font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ash); margin: 0 0 26px;
+}
+.crumb a { color: var(--gold); }
+.crumb span { margin: 0 8px; color: var(--gold-deep); }
+.wrap.narrow-l { max-width: 820px; }
+.story-sec { background: var(--ink); }
+.lyrics-sec { background: var(--coal); }
+.lyrics-tag {
+  font-size: 12.5px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); margin: -8px 0 30px;
+}
+.lyrics {
+  columns: 2; column-gap: 54px;
+  font-size: 16px; line-height: 1.85; color: #cfc6b0; max-width: 900px;
+}
+.lyrics p { break-inside: avoid; margin: 0 0 1.5em; }
+.lyrics .lyr-chorus { color: var(--paper); border-left: 2px solid var(--line); padding-left: 16px; }
+.lyrics-foot { margin: 30px 0 0; font-size: 12px; letter-spacing: 0.06em; color: #8d8570; }
+.credits-sec { background: var(--ink); }
+.credits-list { list-style: none; margin: 26px 0 34px; padding: 0; display: grid; max-width: 640px; }
+.credits-list li {
+  display: flex; gap: 20px; align-items: baseline;
+  padding: 13px 2px; border-bottom: 1px solid var(--line-soft);
+}
+.credits-list .ck {
+  min-width: 150px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--gold);
+}
+.credits-list .cv { color: var(--paper); font-size: 15.5px; }
+@media (max-width: 700px) {
+  .lyrics { columns: 1; }
+  .credits-list li { flex-direction: column; gap: 4px; }
+  .credits-list .ck { min-width: 0; }
+}
+
 /* ---------- videos ---------- */
 .videos {
   background:
