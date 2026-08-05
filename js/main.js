@@ -119,4 +119,34 @@
   } else {
     lazyFrames.forEach(loadFrame);
   }
+
+  /* ----- release countdown ----- */
+  document.querySelectorAll(".countdown[data-drop]").forEach(function (cd) {
+    var target = new Date(cd.getAttribute("data-drop")).getTime();
+    if (isNaN(target)) return;
+    var cells = {
+      days: cd.querySelector('[data-cd="days"]'),
+      hours: cd.querySelector('[data-cd="hours"]'),
+      mins: cd.querySelector('[data-cd="mins"]'),
+      secs: cd.querySelector('[data-cd="secs"]')
+    };
+    var pad = function (n) { return (n < 10 ? "0" : "") + n; };
+    var timer;
+    var tick = function () {
+      var diff = target - Date.now();
+      if (diff <= 0) {
+        cd.classList.add("dropped");
+        cd.innerHTML = '<span class="cd-out">Out Now</span>';
+        if (timer) clearInterval(timer);
+        return;
+      }
+      var s = Math.floor(diff / 1000);
+      if (cells.days) cells.days.textContent = Math.floor(s / 86400);
+      if (cells.hours) cells.hours.textContent = pad(Math.floor((s % 86400) / 3600));
+      if (cells.mins) cells.mins.textContent = pad(Math.floor((s % 3600) / 60));
+      if (cells.secs) cells.secs.textContent = pad(s % 60);
+    };
+    tick();
+    timer = setInterval(tick, 1000);
+  });
 })();

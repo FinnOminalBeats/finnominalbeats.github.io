@@ -299,6 +299,68 @@ strong { color: var(--paper); font-weight: 500; }
   border-radius: 14px; background: var(--panel); display: block;
 }
 
+/* ---------- new single (All Kind) ---------- */
+.single {
+  background:
+    radial-gradient(55% 60% at 22% 22%, rgba(201, 162, 75, 0.10), transparent 70%),
+    var(--coal);
+}
+.single-grid {
+  display: grid; grid-template-columns: minmax(0, 480px) 1fr;
+  gap: 70px; align-items: center;
+}
+.art-frame--single { position: relative; }
+.single-badge {
+  position: absolute; top: 20px; left: 20px; z-index: 3;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase;
+  color: #171204; background: linear-gradient(160deg, var(--gold-bright), var(--gold) 60%, var(--gold-deep));
+  padding: 6px 14px; border-radius: 100px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55);
+}
+.single-meta {
+  font-family: var(--font-body); font-size: 13px; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+  margin: -6px 0 22px;
+}
+.countdown { display: flex; gap: 12px; margin: 0 0 26px; }
+.cd-cell {
+  display: flex; flex-direction: column; align-items: center; gap: 5px;
+  min-width: 66px; padding: 12px 8px;
+  border: 1px solid var(--line); border-radius: 8px;
+  background: rgba(13, 11, 8, 0.6);
+}
+.cd-num {
+  font-family: var(--font-display); font-size: 30px; font-weight: 700;
+  line-height: 1; color: var(--gold-bright); font-variant-numeric: tabular-nums;
+}
+.cd-lab {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--ash);
+}
+.cd-out {
+  font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold-bright);
+  border: 1px solid var(--gold); border-radius: 100px; padding: 10px 26px;
+}
+.single-hook {
+  margin: 0 0 22px; padding: 8px 0 8px 24px;
+  border-left: 3px solid var(--gold);
+  font-family: var(--font-display); font-size: clamp(18px, 2.3vw, 24px);
+  line-height: 1.55; color: var(--paper);
+}
+.single-hook em { color: var(--gold-bright); font-style: italic; }
+.single-note {
+  margin: 22px 0 0; font-size: 12.5px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--ash);
+}
+@media (max-width: 1020px) {
+  .single-grid { grid-template-columns: 1fr; gap: 44px; }
+  .single-art { max-width: 480px; margin: 0 auto; }
+}
+@media (max-width: 560px) {
+  .cd-cell { min-width: 0; flex: 1; }
+  .cd-num { font-size: 24px; }
+}
+
 /* ---------- videos ---------- */
 .videos {
   background:
