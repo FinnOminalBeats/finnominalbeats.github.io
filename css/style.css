@@ -198,10 +198,22 @@ strong { color: var(--paper); font-weight: 500; }
   position: relative; z-index: 2; padding: 260px 24px 70px;
   display: flex; flex-direction: column; align-items: center;
 }
-.hero-word { margin: 0 0 6px; }
+.hero-word { position: relative; z-index: 0; margin: 0 0 6px; }
+.hero-word::before {
+  content: ""; position: absolute; z-index: -1;
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 116%; height: 154%;
+  background: radial-gradient(closest-side, rgba(7, 6, 4, 0.82), rgba(7, 6, 4, 0.55) 52%, transparent 80%);
+  filter: blur(11px); pointer-events: none;
+}
 .hero-word img {
   width: min(430px, 74vw); height: auto;
-  filter: drop-shadow(0 6px 30px rgba(201, 162, 75, 0.28));
+  /* dark keyline + shadow (was a gold glow — unreadable on the gold hoodie) */
+  filter:
+    drop-shadow(0 0 1px rgba(0, 0, 0, 0.95))
+    drop-shadow(0 1px 2px rgba(0, 0, 0, 0.9))
+    drop-shadow(0 0 7px rgba(0, 0, 0, 0.6))
+    drop-shadow(0 6px 20px rgba(0, 0, 0, 0.5));
 }
 .hero-tagline {
   font-size: clamp(11px, 1.6vw, 14px);
