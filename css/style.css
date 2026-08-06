@@ -404,6 +404,13 @@ strong { color: var(--paper); font-weight: 500; }
   .credits-list .ck { min-width: 0; }
 }
 
+.album-tracks .tk-note {
+  margin-left: auto; text-align: right;
+  font-size: 12.5px; font-weight: 300; letter-spacing: 0.02em;
+  text-transform: none; color: var(--ash); max-width: 58%;
+}
+@media (max-width: 560px) { .album-tracks .tk-note { display: none; } }
+
 /* ---------- videos ---------- */
 .videos {
   background:
