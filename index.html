@@ -37,7 +37,7 @@
 
 <link rel="preload" as="image" href="assets/hero-1920.jpg" media="(min-width: 761px)">
 <link rel="preload" as="image" href="assets/hero-mobile.jpg" media="(max-width: 760px)">
-<link rel="stylesheet" href="css/style.css?v=2">
+<link rel="stylesheet" href="css/style.css?v=4">
 
 <script type="application/ld+json">
 {
@@ -225,9 +225,12 @@
           The first single of the nightlife era, with more landing all year.</p>
 
         <div class="btn-row reveal">
-          <!-- TODO: swap the Linktree href to the direct All Kind Spotify track / smart link when available -->
           <a class="btn btn-gold" href="https://linktr.ee/FinnOminal" target="_blank" rel="noopener">Stream All Kind</a>
-          <a class="btn btn-ghost" href="https://open.spotify.com/artist/1dx9nKXoz9zopfNN9EDTf4" target="_blank" rel="noopener">Follow on Spotify</a>
+          <a class="btn btn-ghost" href="https://open.spotify.com/track/1owB58W4rGURuG51rMT1fA" target="_blank" rel="noopener">Listen on Spotify</a>
+        </div>
+
+        <div class="single-player reveal">
+          <div class="spotify-autoplay" id="all-kind-player" data-uri="spotify:track:1owB58W4rGURuG51rMT1fA" data-height="152"></div>
         </div>
 
         <p class="single-note reveal">Out now — stream it everywhere. &nbsp;Explicit.</p>
@@ -494,6 +497,8 @@
   </div>
 </footer>
 
+<script defer src="js/spotify-autoplay.js?v=1"></script>
+<script defer src="https://open.spotify.com/embed/iframe-api/v1"></script>
 <script src="js/main.js?v=allkind" defer></script>
 </body>
 </html>

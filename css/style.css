@@ -423,6 +423,24 @@ strong { color: var(--paper); font-weight: 500; }
 }
 @media (max-width: 560px) { .album-tracks .tk-note { display: none; } }
 
+.single-player { margin: 24px 0 0; max-width: 560px; }
+.single-player iframe { display: block; width: 100%; border-radius: 12px; }
+.music-toggle {
+  position: fixed; z-index: 60; right: 18px; bottom: 18px;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-body); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; color: #171204;
+  background: linear-gradient(160deg, var(--gold-bright), var(--gold) 60%, var(--gold-deep));
+  border: 0; border-radius: 100px; padding: 11px 18px; cursor: pointer;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s var(--ease), box-shadow 0.2s;
+  animation: mtIn 0.4s var(--ease);
+}
+.music-toggle:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(201, 162, 75, 0.4); }
+.music-toggle .mt-ico { font-size: 11px; }
+@keyframes mtIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .music-toggle { animation: none; } }
+
 /* ---------- videos ---------- */
 .videos {
   background:
