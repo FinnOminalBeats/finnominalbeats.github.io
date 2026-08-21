@@ -149,4 +149,15 @@
     tick();
     timer = setInterval(tick, 1000);
   });
+
+  /* ----- singles-strip status auto-flip (pre-save -> out now on release day) ----- */
+  document.querySelectorAll(".sc-status[data-live-date]").forEach(function (el) {
+    var when = new Date(el.getAttribute("data-live-date")).getTime();
+    if (isNaN(when)) return;
+    var live = Date.now() >= when;
+    var soon = el.getAttribute("data-soon-label") || el.textContent;
+    el.textContent = live ? "Out Now" : soon;
+    el.classList.toggle("is-live", live);
+    el.classList.toggle("is-soon", !live);
+  });
 })();

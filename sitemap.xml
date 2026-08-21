@@ -3,12 +3,20 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://finnominal.net/</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://finnominal.net/assets/allkind-cover-1200.jpg</image:loc>
-      <image:title>All Kind — new single by Finn Ominal, out August 14, 2026</image:title>
+      <image:title>All Kind — single by Finn Ominal, out August 14, 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://finnominal.net/assets/holiday-cover-1200.jpg</image:loc>
+      <image:title>Holiday — single by Finn Ominal, out August 21, 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://finnominal.net/assets/twosumn-cover-1200.jpg</image:loc>
+      <image:title>Two Sumn — single by Finn Ominal, out August 28, 2026</image:title>
     </image:image>
     <image:image>
       <image:loc>https://finnominal.net/assets/album-cover-1200.jpg</image:loc>

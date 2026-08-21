@@ -256,7 +256,9 @@ strong { color: var(--paper); font-weight: 500; }
 
 /* ---------- sections ---------- */
 .section { padding: 110px 0; position: relative; }
-.section:nth-of-type(even) { background: var(--coal); }
+/* zebra fallback only — :where() keeps zero specificity so each section's own
+   background (and gold radials) always wins; order-independent as sections are added */
+:where(.section:nth-of-type(even)) { background: var(--coal); }
 
 /* ---------- album ---------- */
 .album {
@@ -627,4 +629,63 @@ strong { color: var(--paper); font-weight: 500; }
   .chip-prefix { display: none; }
   .nav-cta .btn { display: none; }
   .footer-inner { flex-direction: column; text-align: center; }
+}
+
+/* ---------- singles run (new music every Friday) ---------- */
+/* the two sections with no own background — set explicitly (were coal via the old zebra) */
+.section.music { background: var(--coal); }
+.section.lanes { background: var(--coal); }
+
+.singles-run {
+  text-align: center;
+  background:
+    radial-gradient(60% 60% at 50% 0%, rgba(201, 162, 75, 0.08), transparent 70%),
+    var(--coal);
+}
+.singles-run .lead { max-width: 720px; margin-left: auto; margin-right: auto; }
+.singles-strip {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
+  margin-top: 50px; text-align: left;
+}
+.single-card {
+  display: flex; flex-direction: column;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--panel); overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.35s var(--ease), border-color 0.35s, box-shadow 0.35s;
+}
+.single-card:hover {
+  transform: translateY(-5px); border-color: var(--gold);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.7), 0 6px 30px rgba(201,162,75,0.18);
+}
+.single-card.is-featured { border-color: var(--gold); box-shadow: 0 24px 60px rgba(0,0,0,0.55), 0 0 0 1px rgba(201,162,75,0.35); }
+.sc-art { display: block; position: relative; aspect-ratio: 1 / 1; overflow: hidden; }
+.sc-art img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+.single-card:hover .sc-art img { transform: scale(1.05); }
+.sc-flag {
+  position: absolute; top: 16px; left: 16px; z-index: 2;
+  font-size: 10.5px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+  color: #171204; background: linear-gradient(160deg, var(--gold-bright), var(--gold) 60%, var(--gold-deep));
+  padding: 5px 13px; border-radius: 100px; box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+.sc-body { padding: 22px 22px 26px; display: flex; flex-direction: column; gap: 9px; }
+.sc-status {
+  align-self: flex-start;
+  font-size: 10.5px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+  border-radius: 100px; padding: 5px 13px; border: 1px solid var(--line);
+}
+.sc-status.is-live {
+  color: #171204; border-color: transparent;
+  background: linear-gradient(160deg, var(--gold-bright), var(--gold) 60%, var(--gold-deep));
+}
+.sc-status.is-soon { color: var(--gold-bright); background: rgba(13, 11, 8, 0.6); }
+.sc-title {
+  font-family: var(--font-display); font-size: 26px; font-weight: 600;
+  letter-spacing: 0.04em; text-transform: uppercase; color: var(--paper);
+}
+.sc-date { margin: 0; font-size: 12.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ash); }
+.sc-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.sc-links .btn { flex: 1; min-width: 118px; }
+@media (max-width: 860px) {
+  .singles-strip { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
 }
